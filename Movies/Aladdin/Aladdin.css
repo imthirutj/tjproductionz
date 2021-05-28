@@ -17,9 +17,7 @@ header{
     padding: 40px 100px;
     z-index: 1000;
 }
-header .logo{
-    max-width: 120px;
-}
+
 header .toggle{
     max-width: 60px;
     cursor: pointer;
