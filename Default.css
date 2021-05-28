@@ -47,6 +47,18 @@ header .toggle{
     color: #fff;
     margin: 15px 0 35px;
 }
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    background: url('bg.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 .play{
     position: relative;
     display: inline-flex;
