@@ -22,18 +22,9 @@ header .toggle{
     max-width: 60px;
     cursor: pointer;
 }
-.banner{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(https://wallpapersflix.com/wp-content/uploads/2021/05/Army-of-The-Dead-Computer-Wallpaper.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
+
+
+
 .banner .content{
     max-width: 550px;
 }
