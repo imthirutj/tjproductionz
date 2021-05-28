@@ -21,7 +21,18 @@ header .toggle{
     cursor: pointer;
 }
 
-
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    background: url('https://dx35vtwkllhj9.cloudfront.net/netflix/army-of-the-dead/images/regions/us/tt.png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 .banner .content{
     max-width: 550px;
