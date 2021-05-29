@@ -149,6 +149,14 @@ ul li a i{
   margin-right: 15px;
 }
 
+.go-back{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+ 
+  opacity:0.8;
+}
+
 	</style>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
@@ -157,6 +165,12 @@ ul li a i{
 
 
   <body>
+  
+  <div class="go-back">
+  
+  <span class ="fas fa-arrow-left fa-2x" style="color:silver;"> </span>
+  </div>
+  
     <nav>
       <div class="drop-btn">
         Seasons <span class="fas fa-caret-down"></span>
@@ -243,6 +257,7 @@ ul li a i{
 
     <script>
     const drop_btn = document.querySelector(".drop-btn span");
+    const go_back = document.querySelector(".go-back");
     
     const tooltip = document.querySelector(".tooltip");
     const menu_wrapper = document.querySelector(".wrapper");
@@ -258,6 +273,10 @@ ul li a i{
       drop_btn.onclick = (()=>{
         menu_wrapper.classList.toggle("show");
         tooltip.classList.toggle("show");
+      });
+      
+        go_back.onclick = (()=>{
+        window.history.back();
       });
      
       setting_item.onclick = (()=>{
