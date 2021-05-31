@@ -46,10 +46,45 @@ header .logo {
             <a href="#" class="play" onclick="toggle();"><img src="https://imthirutj.github.io/tjproductionz/Movies/Aladdin/play.png" alt="">watch now</a>
         </div>
     </div>
+    
+    
+    
+    <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+    
     <div class="trailer">
-        <video src="Aladdin.mp4" controls="true"></video>
+    
+    
+   <!--     <video style=" object-fit: fill;" src="http://www.cinemv.fun/files/Tamil%202021%20Movies/Karnan%20(2021)%20Tamil%20Proper%20HDRip/Karnan%20Tamil%20Proper%20HDRip%20Single%20Part/Karnan%20(2021)%20Tamil%20Proper%20HDRip%20Single%20Part.mp4" controls="true"></video>
+        -->
+        
+          <div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause </button> <br><br><br>
+  
+        
+       <video id="video-id" poster="https://i.ytimg.com/vi/nK6TRLxhYGE/maxresdefault.jpg" width="360">
+
+    <source src="https://icecube-us-845.icedrive.io/download?p=4PLDZeKX8.X28OclmppTgguOxSybzzSpRXIkrf976RXdxqKg7VpMP6Z0C7sl1N.m_D5b90sdr.2m..IRqjwzL9mah7HEi8y6aqAOyRp4FA21GfwQzLCeeTORkyYdmXdO2wN9JwVDruDBltaIh7nDWiQN4sqpmLAcNa8zi2R8tprySkykTFsITYAuVxfPcUbkyt11KlyJF5MVDod.JIOTIi9DWmc_RvBCAD8joC8_g58Hs7qTxY5cOe7kD6fWmYPcH6TOxxRutGhAevN4O1qyL1KXP9c1DyTJAxodo4vFpnCvvwQM.XRZfVMqh8i3vr5AzlvtTbQ211U75Ml3Mza70A--" title="1080p" type="video/mp4"></source>
+    
+    <source src="https://icecube-us-846.icedrive.io/download?p=4PLDZeKX8.X28OclmppTgguOxSybzzSpRXIkrf976RU7Cd89GxTd_6qhTxijzeYv_D5b90sdr.2m..IRqjwzL9mah7HEi8y6aqAOyRp4FA2ugBHbSR57_atg0dSQabZNfqZPfbvFOrkXebm2eszJK4qqa1bZTByp6eOoXdlJJELySkykTFsITYAuVxfPcUbkyt11KlyJF5MVDod.JIOTIhKpMp5nmjRpm5YLgGaNTsaBl_pTxXQdRY1nECIaBYQRJz42stAiFXdZjoBoxdBo8WT8HA2prb1GGcwYBnLj2OSJRG4uNJMuZY8FjhE1R4xJ" title="720p" type="video/mp4"></source>
+    
+    <source src="http://www.cinemv.fun/files/Tamil%202021%20Movies/Karnan%20(2021)%20Tamil%20Proper%20HDRip/Karnan%20Tamil%20Proper%20HDRip%20Single%20Part/Karnan%20(2021)%20Tamil%20Proper%20HDRip%20Single%20Part.mp4" title="480p" type="video/mp4"></source>
+</video>
+
+</div>
+
         <img src="https://imthirutj.github.io/tjproductionz/Movies/Aladdin/close.png" alt="" class="close" onclick="toggle();">
     </div>
+    
+    <script> 
+var myVideo = document.getElementById("video-id"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+</script>
     <script>
         function toggle(){
         var trailer=document.querySelector('.trailer');
@@ -59,6 +94,44 @@ header .logo {
         video.pause();
     }
     </script>
-	</section>
+	
+    
+</script> 
+
+  
+
+<script>
+    var myFP = fluidPlayer(
+        'video-id',	{
+	"layoutControls": {
+		"controlBar": {
+			"autoHideTimeout": 3,
+			"animated": true,
+			"autoHide": true
+		},
+		"htmlOnPauseBlock": {
+			"html": null,
+			"height": null,
+			"width": null
+		},
+		"autoPlay": false,
+		"mute": true,
+		"allowTheatre": true,
+		"playPauseAnimation": false,
+		"playbackRateEnabled": false,
+		"allowDownload": false,
+		"playButtonShowing": false,
+		"fillToContainer": false,
+		"posterImage": ""
+	},
+	"vastOptions": {
+		"adList": [],
+		"adCTAText": false,
+		"adCTATextPosition": ""
+	}
+})
+</script>
+    
+    </section>
 </body>
 </html>
