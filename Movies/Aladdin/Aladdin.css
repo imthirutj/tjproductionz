@@ -106,7 +106,7 @@ header .toggle{
     max-width: 32px;
 }
 
-@media (max-width: 991px){
+@media (max-width: 450px){
     header{
         padding: 20px 50px;
     }
