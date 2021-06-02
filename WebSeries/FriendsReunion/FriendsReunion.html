@@ -20,7 +20,9 @@
     width: 100%;
     min-height: 100vh;
     padding: 0 100px;
-    background: url('https://variety.com/wp-content/uploads/2021/05/Friends-The-Reunion.jpg?w=681&h=383&crop=1');
+    background-image: url('https://variety.com/wp-content/uploads/2021/05/Friends-The-Reunion.jpg?w=681&h=383&crop=1');
+    
+  
     background-position: center;
     background-size: cover;
     display: flex;
@@ -28,14 +30,22 @@
     align-items: center;
 } 
 
+.logos{
+display:none;
+}
+
+
 @media only screen and (max-width: 450px){
 
 body{
 background: url('https://www.harpersbazaararabia.com/public/images/2021/05/25/Friends_The_Reunion-min.jpg');
   background-size: cover;
+  background-position: center center;
 
 }
-
+.logos{
+display:flex;
+}
 }
 
 nav{
@@ -170,6 +180,13 @@ ul li a i{
 
 
   <body>
+  
+  <header>
+  <div class="logo">
+  <img class="logos" src="https://hbomax-images.warnermediacdn.com/2021-05/friends.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com&w=4480" style="width:100%;position:relative; top:-320px;" >
+  </div>
+  
+  </header>
     
   <div class="go-back">
   
@@ -178,7 +195,7 @@ ul li a i{
   
     <nav>
       <div class="drop-btn">
-        Seasons  <span class="fas fa-caret-down" ></span>
+        Seasons  <span class="fas fa-caret-down" ></>
       </div>
 
 
@@ -191,25 +208,7 @@ ul li a i{
               <span class="fa fa-bars" ></span> </div>
            Season 01</a></li>
            
-           
-          <li class="setting-item"><a href="">
-            <div class="icon">
-              <span class="fa fa-bars"></span></div>
-              Season 02 <!--<i class="fas fa-angle-right"></i> -->
-          </a></li>
-          <li class="help-item"><a href="#">
-            <div class="icon">
-              <span class="fa fa-bars"></span></div>
-              Season 03 
-          </a></li>
-          <li><a href="#">
-            <div class="icon">
-              <span class="fa fa-bars"></span></div>
-              Season 04 </a></li>
-          <li><a href="#">
-            <div class="icon">
-              <span class="fa fa-bars"></span></div>
-              Season 05 </a></li>
+         
         </ul>
 
       </div>
