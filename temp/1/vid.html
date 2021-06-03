@@ -1,17 +1,90 @@
-<!DOCTYPE html> 
-<html> 
-<body> 
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Plyr Demo</title>
+  <link rel='stylesheet' href='https://cdn.plyr.io/3.4.6/plyr.css'>
+  
+  <style>
+  /* This is purely for the demo */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.plyr {
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+  </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+<video controls crossorigin playsinline poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="player">
+                <!-- Video files -->
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
 
-<video width="400" controls>
-  <source src="https://www.cinemv.fun/files/Tamil%202021%20Movies/Karnan%20(2021)%20Tamil%20Proper%20HDRip/Karnan%20Tamil%20Proper%20HDRip%20Single%20Part/Karnan%20(2021)%20Tamil%20Proper%20HDRip%20Single%20Part.mp4" type="video/mp4">
+                <!-- Caption files -->
+                <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+                    default>
+                <track kind="captions" label="Français" srclang="fr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
 
-  Your browser does not support HTML video.
-</video>
+                <!-- Fallback for browsers that don't support the <video> element -->
+                <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            </video>
+  
+  <div class="actions">
+    <button type="button" class="btn js-play">Play</button>
+    <button type="button" class="btn js-pause">Pause</button>
+    <button type="button" class="btn js-stop">Stop</button>
+    <button type="button" class="btn js-rewind">Rewind</button>
+    <button type="button" class="btn js-forward">Forward</button>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdn.plyr.io/3.4.6/plyr.js'></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => { 
+  // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+  const player = new Plyr('#player');
+  
+  // Expose
+  window.player = player;
 
-<p>
-Video courtesy of 
-<a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.
-</p>
+  // Bind event listener
+  function on(selector, type, callback) {
+    document.querySelector(selector).addEventListener(type, callback, false);
+  }
 
-</body> 
+  // Play
+  on('.js-play', 'click', () => { 
+    player.play();
+  });
+
+  // Pause
+  on('.js-pause', 'click', () => { 
+    player.pause();
+  });
+
+  // Stop
+  on('.js-stop', 'click', () => { 
+    player.stop();
+  });
+
+  // Rewind
+  on('.js-rewind', 'click', () => { 
+    player.rewind();
+  });
+
+  // Forward
+  on('.js-forward', 'click', () => { 
+    player.forward();
+  });
+});
+  </script>
+
+</body>
 </html>
