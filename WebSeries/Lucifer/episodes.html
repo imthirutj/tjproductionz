@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     
      <style>
@@ -62,8 +63,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  width: 99%;
-  height:5%;
+  width: 95%;
+  height:6%;
    padding: 6px;
   background-color:silver;
   border-radius: 4px;
@@ -73,6 +74,7 @@ body {
   }
 
   .play img{
+  
   width:30px;
   }
   .poster img{
@@ -88,27 +90,113 @@ body {
   width: 99%;
   }
   
+  
+  .desc{  margin: 0;
+  padding: 0;
+
+  position: absolute;
+  top: 56%;
+  left: 5%;
+  right:3%;
+  
+  }
+  
+  .desc h1{  font-size: 1.7rem;  font-weight: bold;
+
+  }
+  .line{border-top: 1px solid #4c4c4c; 
+  }
+  
+  
+  .tabs {
+   
+  color:white;
+  float: left;
+  width: 50%;
+  padding: 4px;
+  background:none;
+ /* Should be removed. Only for demonstration */
+}
+
+.rows:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.rows .tabs h2{font-size: 1.1rem;  font-weight: bold;}
+
+.wrap{ position:absolute;
+  top: 100%;
+  left: 0%;
+  right:3%;}
+
+.playz{
+ filter: invert(100);
+ position:absolute;
+ left:50px;
+ top:6px;
+ 
+}
+.wrap span{
+font-size: 1.1rem;  font-weight: bold;
+position:absolute;
+  top: 50px;
+  left: 250px;
+  
+} 
+.wrap p{
+position:absolute;
+  top: 130px;
+  left: 0px;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="poster">   <img src=" https://posterspy.com/wp-content/uploads/2020/01/TitioLulu.jpg" width="200px" height="auto"> </div>
+<div class="poster">   <img src=" https://posterspy.com/wp-content/uploads/2020/01/TitioLulu.jpg" width="200px" height="auto"> </div></header>
 <div class="play">
 <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Play-Black-Icon-PNG-715x673.png" width="5%">
 
 Play</div>
-<div class="poster-bg">
+<div class="poster-bg"></div>
+<div class="desc">
+<h1>Lucifer</h1>
+<section> Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.</section> <hr class="line">
+
+<div class="rows">
+  <div class="tabs" >
+    <h2>Episodes</h2>
+
+  </div>
+  <div class="tabs">
+    <h2>Trailers 2</h2>
+  
+  </div>
+</div>
+
+
+
+
+<div class="episodes">
+
+<div class="episodes1"> <div class= "wrap"><img src="https://occ-0-2611-3662.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYl_p3wHmkm-mWyRuwJkIkgCmLQbMm15oPcT6E5kiNGQV2MbxxlpxCvzw2padtHB4LgbYhV-CIvoGU7eLXEulSxWDfDDHU1pS6a82mmjfXvdeuaB.webp?r=54a"   width="210px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="100px" class="playz">
+<span class="titleCard-title_text">1. Really Sad Devil Guy</span><p>
+Lucifer toys with a murder victim while Chloe and Maze investigate the death. Meanwhile, Amenadiel cleans up the club, and Linda mothers a genius.</p>
+</div>
+
 
 </div>
 
 
-</header>
+
+
+</div>
 
 
 
-
+</div>
 
      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
