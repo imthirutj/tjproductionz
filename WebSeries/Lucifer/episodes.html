@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flick Play</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    
+    
+     <style>
+	 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600&display=swap");
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #020202;
+}
+
+
+
+.poster-bg{
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background:linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    url("https://posterspy.com/wp-content/uploads/2020/01/TitioLulu.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    filter: blur(18px);
+  -webkit-filter: blur(18px);
+  box-shadow: inset 30px 10px 60px #000, inset -20px -70px 100px #000000;
+}
+.play{   /* Black w/opacity/see-through */
+  text-transform: uppercase;
+ 
+  font-size: 1.5rem;
+  font-weight: bold;
+   margin: 0;
+  padding: 0;
+ color:black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 99%;
+  height:5%;
+   padding: 6px;
+  background-color:silver;
+  border-radius: 4px;
+  text-align: center;
+  justify-content:center;
+  
+  }
+
+  .play img{
+  width:30px;
+  }
+  .poster img{
+  
+  max-width: 200px;
+  height: auto;
+   position: absolute;
+   
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 99%;
+  }
+  
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="poster">   <img src=" https://posterspy.com/wp-content/uploads/2020/01/TitioLulu.jpg" width="200px" height="auto"> </div>
+<div class="play">
+<img src="https://www.searchpng.com/wp-content/uploads/2019/02/Play-Black-Icon-PNG-715x673.png" width="5%">
+
+Play</div>
+<div class="poster-bg">
+
+</div>
+
+
+</header>
+
+
+
+
+
+     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+</body>
