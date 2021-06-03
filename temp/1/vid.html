@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - fluidPlayer v2</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+	<head>
+		<title>Fluid Player</title>
+		<link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
+		<script src="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
+	</head>
+	<body>
+
+		<video id='my-video' controls style="width: 640px; height: 360px;">
+			<source data-fluid-hd src='https://cdn.fluidplayer.com/videos/valerian-1080p.mkv' title='1080p' type='video/mp4' />
+			<source data-fluid-hd src='https://cdn.fluidplayer.com/videos/valerian-720p.mkv' title='720p' type='video/mp4' />
+			<source src='https://cdn.fluidplayer.com/videos/valerian-480p.mkv' title='480p' type='video/mp4' />         
+		</video>
+
+	</body>
+</html>
+<!-- partial -->
+  <script>fluidPlayer(
+	'my-video',
+	{
+		layoutControls: {
+			primaryColor: "#28B8ED"
+		},
+		layoutControls: {
+			allowDownload: true // Default false
+		},		
+	}
+);</script>
+
+</body>
+</html>
