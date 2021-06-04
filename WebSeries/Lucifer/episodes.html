@@ -29,6 +29,126 @@ body {
 
 
 
+
+
+nav{
+  position: absolute;
+  top: 108%;
+  left: 78px;
+  transform: translate(-50%, -50%);
+  opacity:1;
+  z-index:6;
+}
+nav .drop-btn{
+  width: 160px;
+  background: #242526;
+  opacity: 01;
+  border-radius: 5px;
+  line-height: 55px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #b0b3b8;
+  padding: 0 20px;
+}
+nav .drop-btn span{
+  float: right;
+  line-height: 50px;
+  font-size: 28px;
+  cursor: pointer;
+}
+nav .tooltip{
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+  height: 15px;
+  width: 15px;
+  background: #242526;;
+  transform: rotate(45deg);
+  display: none;
+}
+nav .tooltip.show{
+  display: active;
+}
+nav .wrapper{
+  position: absolute;
+  top: 65px;
+  display: flex;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+  background:black;
+  display: none;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+nav .wrapper.show{
+  display: block;
+  display: flex;
+}
+.wrapper ul{
+  width: 400px;
+  list-style: none;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li{
+  line-height: 55px;
+}
+.wrapper ul li a{
+  position: relative;
+  color: #b0b3b8;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 10px;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  text-decoration: none;
+}
+.wrapper ul li:hover a{
+  background: #3A3B3C;
+}
+ul li a .icon{
+  height: 40px;
+  width: 40px;
+  margin-right: 13px;
+  background: #ffffff1a;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li a .icon span{
+  line-height: 40px;
+  font-size: 20px;
+  color:#E1D8D6;
+}
+ul li a i{
+  position: absolute;
+  right: 10px;
+  font-size: 25px;
+  pointer-events: none;
+}
+.wrapper ul.setting-drop,
+.wrapper ul.help-drop{
+  display: none;
+}
+.wrapper .arrow{
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #b0b3b8;
+  cursor: pointer;
+}
+.wrapper .arrow span{
+  margin-right: 15px;
+}
+
+
+
+
+
+
 .poster-bg{
   min-height: 30rem;
   position: relative;
@@ -62,7 +182,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  width: 95%;
+  width: 90%;
   height:30px;
    padding: 0px;
   background-color:white;
@@ -144,7 +264,7 @@ body {
 .rows .tabs h2{font-size: 1.1rem;  font-weight: bold;}
 
 .wrap{ position:absolute;
-  top: 100%;
+  top: 130%;
   left: 0%;
   right:3%;}
 
@@ -160,7 +280,7 @@ body {
 font-size: 1.1rem;  font-weight: bold;
 position:absolute;
   top: 30px;
-  left: 250px;
+  left: 180px;
   
 } 
 .wrap p{
@@ -185,6 +305,9 @@ position:absolute;
 <h1>Lucifer</h1>
 <section> Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.</section> <hr class="line">
 
+
+
+
 <div class="rows">
   <div class="tabs" >
     <h2>Episodes</h2>
@@ -196,12 +319,53 @@ position:absolute;
   </div>
 </div>
 
+
+
+ <nav>
+      <div class="drop-btn">
+        Seasons <span class="fas fa-caret-down"></span>
+      </div>
+      <div class="tooltip"></div>
+      <div class="wrapper">
+        <ul class="menu-bar">
+        
+          <li><a href="https://imthirutj.github.io/tjproductionz/WebSeries/Lucifer/episodes.html">
+            <div class="icon">
+              <span class="fa fa-bars" ></span> </div>
+           Season 01</a></li>
+           
+           
+          <li class="setting-item"><a href="">
+            <div class="icon">
+              <span class="fa fa-bars"></span></div>
+              Season 02 <!--<i class="fas fa-angle-right"></i> -->
+          </a></li>
+          <li class="help-item"><a href="#">
+            <div class="icon">
+              <span class="fa fa-bars"></span></div>
+              Season 03 
+          </a></li>
+          <li><a href="#">
+            <div class="icon">
+              <span class="fa fa-bars"></span></div>
+              Season 04 </a></li>
+          <li><a href="#">
+            <div class="icon">
+              <span class="fa fa-bars"></span></div>
+              Season 05 </a></li>
+        </ul>
+
+   
+      </div>
+    </nav>
+
+
 <br>
 
 
 <div class="episodes">
 
-<div class="episodes1"> <div class= "wrap"> <div class="wrapimg"><img src="https://occ-0-2611-3662.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYl_p3wHmkm-mWyRuwJkIkgCmLQbMm15oPcT6E5kiNGQV2MbxxlpxCvzw2padtHB4LgbYhV-CIvoGU7eLXEulSxWDfDDHU1pS6a82mmjfXvdeuaB.webp?r=54a"   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz">  </div>
+<div class="episodes1"> <div class= "wrap"> <img src="https://occ-0-2611-3662.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYl_p3wHmkm-mWyRuwJkIkgCmLQbMm15oPcT6E5kiNGQV2MbxxlpxCvzw2padtHB4LgbYhV-CIvoGU7eLXEulSxWDfDDHU1pS6a82mmjfXvdeuaB.webp?r=54a"   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
 <span>1. Pilot</span><p>
 After an old acquaintance meets a violent fate, the charming Lucifer vows revenge on the perpetrators and makes an unexpected alliance.</p>
 </div>
@@ -222,4 +386,52 @@ After an old acquaintance meets a violent fate, the charming Lucifer vows reveng
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        
+            <script>
+    const drop_btn = document.querySelector(".drop-btn span");
+    const go_back = document.querySelector(".go-back");
+    
+    const tooltip = document.querySelector(".tooltip");
+    const menu_wrapper = document.querySelector(".wrapper");
+    const menu_bar = document.querySelector(".menu-bar");
+    const setting_drop = document.querySelector(".setting-drop");
+    const help_drop = document.querySelector(".help-drop");
+    const setting_item = document.querySelector(".setting-item");
+    const help_item = document.querySelector(".help-item");
+    const setting_btn = document.querySelector(".back-setting-btn");
+    const help_btn = document.querySelector(".back-help-btn");
+
+    
+      drop_btn.onclick = (()=>{
+        menu_wrapper.classList.toggle("show");
+        tooltip.classList.toggle("show");
+      });
+      
+        go_back.onclick = (()=>{
+        window.history.back();
+      });
+     
+      setting_item.onclick = (()=>{
+        menu_bar.style.marginLeft = "-400px";
+        setTimeout(()=>{
+          setting_drop.style.display = "block";
+        }, 100);
+      });
+      help_item.onclick = (()=>{
+        menu_bar.style.marginLeft = "-400px";
+        setTimeout(()=>{
+          help_drop.style.display = "block";
+        }, 100);
+      });
+      setting_btn.onclick = (()=>{
+        menu_bar.style.marginLeft = "0px";
+        setting_drop.style.display = "none";
+      });
+      help_btn.onclick = (()=>{
+        help_drop.style.display = "none";
+        menu_bar.style.marginLeft = "0px";
+      }); 
+     
+    </script> 
 </body>
