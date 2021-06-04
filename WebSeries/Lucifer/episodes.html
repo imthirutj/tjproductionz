@@ -33,7 +33,7 @@ body {
 
 nav{
   position: absolute;
-  top: 108%;
+  top: 220px;
   left: 78px;
   transform: translate(-50%, -50%);
   opacity:1;
@@ -246,12 +246,14 @@ ul li a i{
   
   
   .tabs {
-   
+  border-radius:2px;
+   cursor:pointer;
   color:white;
   float: left;
-  width: 50%;
+width:120px;
   padding: 4px;
   background:none;
+transition:0.5s;
  /* Should be removed. Only for demonstration */
 }
 
@@ -263,10 +265,37 @@ ul li a i{
 }
 .rows .tabs h2{font-size: 1.1rem;  font-weight: bold;}
 
-.wrap{ position:absolute;
-  top: 130%;
-  left: 0%;
-  right:3%;}
+
+.tabs:active{
+width:120px;
+background-color:silver;
+opacity:0.5;
+z-index:-5;
+  
+}
+img{
+pointer-events: none;}
+.ep:active img{  opacity:0.3;}
+
+.ep{position:absolute;left: 0%;
+transition:0.5s;
+  right:3%;
+cursor:pointer;
+height:150px;
+}
+.ep:active{
+background-color:silver;
+opacity:0.5;
+z-index:5;
+}
+.ep1{ 
+top:250px;
+ }
+  
+.ep2{ 
+top:400px ;
+}
+
 
 .playz{
  filter: invert(100);
@@ -276,14 +305,14 @@ ul li a i{
  
 }
 
-.wrap span{
+.season1 span{
 font-size: 1.1rem;  font-weight: bold;
 position:absolute;
   top: 30px;
   left: 180px;
   
 } 
-.wrap p{
+.season1 p{
   font-size: 0.7rem; 
 position:absolute;
   top: 100px;
@@ -363,20 +392,22 @@ position:absolute;
 <br>
 
 
-<div class="episodes">
+<div class="season1">
 
-<div class="episodes1"> <div class= "wrap"> <img src="https://occ-0-2611-3662.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYl_p3wHmkm-mWyRuwJkIkgCmLQbMm15oPcT6E5kiNGQV2MbxxlpxCvzw2padtHB4LgbYhV-CIvoGU7eLXEulSxWDfDDHU1pS6a82mmjfXvdeuaB.webp?r=54a"   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+ <div class= "ep ep1"> <img src="https://occ-0-2611-3662.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYl_p3wHmkm-mWyRuwJkIkgCmLQbMm15oPcT6E5kiNGQV2MbxxlpxCvzw2padtHB4LgbYhV-CIvoGU7eLXEulSxWDfDDHU1pS6a82mmjfXvdeuaB.webp?r=54a"   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
 <span>1. Pilot</span><p>
-After an old acquaintance meets a violent fate, the charming Lucifer vows revenge on the perpetrators and makes an unexpected alliance.</p>
+After an old acquaintance meets a violent fate, the charming Lucifer vows revenge on the perpetrators and makes an unexpected alliance.<p>
 </div>
 
 
+
+ <div class= "ep ep2"> <img src="https://occ-0-2611-3662.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABTX7SzHhix-Ulyfgir5Er67-uogzR4OclAmL0LJ1idEwowa6v0VNqe6NkOLeWgOEhI1rVTzQeXz8taCAqDdWtCLfQOVYs_OaC4FEkYuFWD_Gje1t.webp?r=5db"   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+<span>2. Lucifer, Stay. Good Devil.</span><p>
+While feeling the heat to return to hell, Lucifer makes time to investigate how overeager paparazzi contributed to a young man's death.<p>
 </div>
 
 
-
-
-</div>
+</div> <!-- season1 -->
 
 
 
