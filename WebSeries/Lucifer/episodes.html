@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,6 +27,41 @@ body {
   background-color: #020202;
 
 }
+
+
+.trailer{
+    display:flex ;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+     justify-content: center;
+    align-items: center;
+     top: -200%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+ visibility:hidden;
+     opacity: 0;
+
+}
+.trailerDis{
+     display:flex;
+    position: fixed;
+ transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+
+   visibility:visible;
+   opacity: 1;
+}
+
 
 
 
@@ -320,10 +354,33 @@ position:absolute;
   top: 100px;
   left: 0px;
 }
+.go-back{
+cursor:pointer;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+ visibility:visible;
+  opacity:1;
+  z-index:7;
+}
+.go-backAct{
+cursor:pointer;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  visibility:visible;
+  opacity:1;
+  z-index:7;
+}
+
 </style>
 </head>
 
 <body>
+  <div class="go-back">
+  
+  <span class ="fas fa-arrow-left fa-2x" style="color:silver;"> </span>
+  </div>
 
 <header>
 <div class="poster">   <img src=" https://posterspy.com/wp-content/uploads/2020/01/TitioLulu.jpg" width="200px" height="auto"> </div></header>
@@ -396,23 +453,28 @@ position:absolute;
 
 <div class="season1">
 
- <div class= "ep ep1"> <img src="https://occ-0-2611-3662.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYl_p3wHmkm-mWyRuwJkIkgCmLQbMm15oPcT6E5kiNGQV2MbxxlpxCvzw2padtHB4LgbYhV-CIvoGU7eLXEulSxWDfDDHU1pS6a82mmjfXvdeuaB.webp?r=54a"   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+ <div class= "ep ep1" onclick="toggle(); ep1();"> <img id="pur1" src=" "   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
 <span>1. Pilot</span><p>
 After an old acquaintance meets a violent fate, the charming Lucifer vows revenge on the perpetrators and makes an unexpected alliance.<p>
-</div>
+</div> <!-- ep1 -->
+
+
+ <div class="trailer"> 
+<video id="video-id" width="100%" controls poster="" >
+ <source src="" title="480p" type="video/mp4"></source>
+</video>
+  
+</div> <!-- trailer -->
 
 
 
- <div class= "ep ep2"> <img src="https://occ-0-2611-3662.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABTX7SzHhix-Ulyfgir5Er67-uogzR4OclAmL0LJ1idEwowa6v0VNqe6NkOLeWgOEhI1rVTzQeXz8taCAqDdWtCLfQOVYs_OaC4FEkYuFWD_Gje1t.webp?r=5db"   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+ <div class= "ep ep2"> <img id="pur2" src="https://occ-0-2611-3662.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABTX7SzHhix-Ulyfgir5Er67-uogzR4OclAmL0LJ1idEwowa6v0VNqe6NkOLeWgOEhI1rVTzQeXz8taCAqDdWtCLfQOVYs_OaC4FEkYuFWD_Gje1t.webp?r=5db"   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
 <span>2. Lucifer, Stay. Good Devil.</span><p>
 While feeling the heat to return to hell, Lucifer makes time to investigate how overeager paparazzi contributed to a young man's death.<p>
 </div>
 
 
 </div> <!-- season1 -->
-
-
-
 </div>
 
      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -421,7 +483,76 @@ While feeling the heat to return to hell, Lucifer makes time to investigate how 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         
-            <script>
+        
+        
+         
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+<script>
+    var myFP = fluidPlayer(
+        'video-id',	{
+	"layoutControls": {
+		"controlBar": {
+			"autoHideTimeout": 3,
+			"animated": true,
+			"autoHide": true
+		},
+		"htmlOnPauseBlock": {
+			"html": null,
+			"height": null,
+			"width": null
+		},
+		"autoPlay": false,
+		"mute": true,
+		"allowTheatre": true,
+		"playPauseAnimation": false,
+		"playbackRateEnabled": false,
+		"allowDownload": false,
+		"playButtonShowing": false,
+		"fillToContainer": false,
+		"posterImage": ""
+	},
+	"vastOptions": {
+		"adList": [],
+		"adCTAText": false,
+		"adCTATextPosition": ""
+	}
+})
+</script>
+    <script>
+           var pur1="https://occ-0-2611-3662.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYl_p3wHmkm-mWyRuwJkIkgCmLQbMm15oPcT6E5kiNGQV2MbxxlpxCvzw2padtHB4LgbYhV-CIvoGU7eLXEulSxWDfDDHU1pS6a82mmjfXvdeuaB.webp?r=54a";
+    
+        document.getElementById("pur1").src=pur1;
+       </script>
+       <script>
+        
+        function toggle(){
+        var trailer=document.querySelector('.trailer');
+     
+        let video=document.querySelector('video');
+     
+        trailer.classList.toggle('trailerDis');
+
+        video.pause();
+         /* var elem = document.getElementById("video-id");
+      if (elem.requestFullscreen) {
+      elem.requestFullscreen();}*/
+      document.querySelector('.go-back').classList.toggle('.go-backAct');
+      
+      }
+        </script>
+        
+        
+        <script>
+        var        ep1_1080p="https://storage.googleapis.com/13463ad60bb10d0920f8/1c611/fbad70e1643733e9a8b44db6b63b0a5e.mp4";
+        function ep1(){
+        var vid=document.querySelector('video');
+        vid.poster=pur1;
+        vid.src=ep1_1080p;
+        }
+ </script>  
+    
+    
+    <script>
     const drop_btn = document.querySelector(".drop-btn span");
     const go_back = document.querySelector(".go-back");
     
@@ -466,5 +597,8 @@ While feeling the heat to return to hell, Lucifer makes time to investigate how 
         menu_bar.style.marginLeft = "0px";
       }); 
      
+     
     </script> 
+    
+    
 </body>
