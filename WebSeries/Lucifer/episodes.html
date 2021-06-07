@@ -64,7 +64,15 @@ justify-content: center;
 
 
 
+.trailer .close{
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
 
+}
 
 
 nav{
@@ -358,29 +366,18 @@ position:absolute;
 cursor:pointer;
   position: absolute;
   top: 5px;
-  left: 5px;
+  left: 500px;
  visibility:visible;
   opacity:1;
-  z-index:7;
+
 }
-.go-backAct{
-cursor:pointer;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  visibility:visible;
-  opacity:1;
-  z-index:7;
-}
+
 
 </style>
 </head>
 
 <body>
-  <div class="go-back">
-  
-  <span class ="fas fa-arrow-left fa-2x" style="color:silver;"> </span>
-  </div>
+
 
 <header>
 <div class="poster">   <img src=" https://posterspy.com/wp-content/uploads/2020/01/TitioLulu.jpg" width="200px" height="auto"> </div></header>
@@ -460,6 +457,10 @@ After an old acquaintance meets a violent fate, the charming Lucifer vows reveng
 
 
  <div class="trailer"> 
+  <div class="go-back" onclick="toggle()">
+  
+  <span class ="fas fa-close" style="color:silver;"> </span>
+  </div>
 <video id="video-id" width="100%" controls poster="" >
  <source src="" title="480p" type="video/mp4"></source>
 </video>
@@ -536,14 +537,14 @@ While feeling the heat to return to hell, Lucifer makes time to investigate how 
          /* var elem = document.getElementById("video-id");
       if (elem.requestFullscreen) {
       elem.requestFullscreen();}*/
-      document.querySelector('.go-back').classList.toggle('.go-backAct');
+
       
       }
         </script>
         
         
         <script>
-        var        ep1_1080p="https://storage.googleapis.com/13463ad60bb10d0920f8/1c611/fbad70e1643733e9a8b44db6b63b0a5e.mp4";
+        var        ep1_1080p="https://dl.dropboxusercontent.com/s/1zacag9135uc7xh/Lucifer.S01E01.HDTV.x264-LOL%5Beztv%5D.mp4?dl=0";
         function ep1(){
         var vid=document.querySelector('video');
         vid.poster=pur1;
@@ -553,6 +554,10 @@ While feeling the heat to return to hell, Lucifer makes time to investigate how 
     
     
     <script>
+    
+
+    
+    
     const drop_btn = document.querySelector(".drop-btn span");
     const go_back = document.querySelector(".go-back");
     
@@ -572,9 +577,7 @@ While feeling the heat to return to hell, Lucifer makes time to investigate how 
         tooltip.classList.toggle("show");
       });
       
-        go_back.onclick = (()=>{
-        window.history.back();
-      });
+    
      
       setting_item.onclick = (()=>{
         menu_bar.style.marginLeft = "-400px";
