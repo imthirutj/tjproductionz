@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+
+
+/* @import url('https://fonts.googleapis.com/
+css?family=poppins:200,300,400,500,600,700,800,900&display=swap'); */
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 1000;
+      @media (max-width:500px){
+          padding: 50px 50px;}
+}
+header .logo{
+    max-width: 120px;
+}
+header .toggle{
+    max-width: 60px;
+    cursor: pointer;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    background: url(https://images.livemint.com/img/2021/05/29/1600x900/pratt2_1622266062664_1622266091023.JPG);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+      @media (max-width:500px){
+         background:url(https://i.pinimg.com/236x/9d/0f/70/9d0f7042c01b22b1fe03b9b7d8639235.jpg);
+         position: relative;
+         background-position: center;
+        box-shadow: inset 60px 70px 150px #000, inset -60px -70px 150px #000000;
+    
+    
+    }
+}
+.banner .content{
+    max-width: 550px;
+}
+.banner .content h2{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+.banner .content h2 span{
+    font-weight: 800;
+}
+.banner .content p{
+    
+    font-weight: 300;
+    font-size: 1.2em;
+    letter-spacing: 0.02em;
+    line-height: 1.5em;
+    color: #fff;
+    margin: 15px 0 35px;
+}
+.play{
+
+    cursor:pointer;
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+a:hover {
+  background-color:silver; opacity:0.5;
+}
+.play img{
+    cursor:pointer;
+    margin-right: 10px;
+    max-width: 50px;
+}
+
+.trailer{
+    display:flex !important;
+ 
+    position: fixed;
+ 
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+   
+    
+    justify-content: center;
+    align-items: center;
+    
+    top: -200%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+ 
+     visibility:hidden;
+     opacity: 0;
+
+}
+.trailerDis{
+     display:flex !important;
+    position: fixed;
+ 
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+   
+    
+    justify-content: center;
+    align-items: center;
+    
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+
+   visibility:visible;
+   opacity: 1;
+}
+
+.trailer .close{
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+}
+
+@media all and (max-width: 500px){
+    header{
+      
+     
+    }
+
+    header .logo img{
+   
+        
+         width:200%;
+    }
+    header .toggle{
+        max-width: 40px;
+        
+    }
+    .banner{
+        padding: 100px 50px;
+        background:url(https://i.pinimg.com/236x/9d/0f/70/9d0f7042c01b22b1fe03b9b7d8639235.jpg);
+         position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+     box-shadow: inset 60px 70px 150px #000, inset -60px -70px 150px #000000;
+    }
+    .banner .content h2{
+     text-shadow: 2px 2px #ADD8E6;
+        font-weight: 400;
+        font-size: 2em;
+        letter-spacing: 0.05em; 
+    }
+    .banner .content p{
+        font-size: 1em;
+        
+    }
+
+
+
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa-download {
+position:absolute;
+top:400px;
+left:50px;
+  background:none;
+  color: white;
+
+  font-size: 1rem;
+}
+.dowIcon{
+font-size: 3rem;}
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karnan</title>
+    <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header>
+     
+    <div class="toggle"><a href="../../index.html"><img src="https://imthirutj.github.io/tjproductionz/Movies/Aladdin/toggle.png" alt=""></a></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2><span>THE TOMORROW WAR</span></h2>
+            <p>
+               A family man is drafted to fight in a future war where the fate of humanity relies on his ability to confront the past.
+            </p>
+            <a href="#" class="play" onclick="toggle();"><img src="https://imthirutj.github.io/tjproductionz/Movies/Aladdin/play.png" alt="">watch now</a>
+            
+            <a href="https://gofile.io/d/HxWqfl" class="play" ><img src="https://imthirutj.github.io/tjproductionz/Movies/Aladdin/downico.ico" width="23%" style = "filter: invert(100%);" alt="">DOWNLOAD now</a>
+        </div>
+    </div>
+   
+    <div class="trailer">
+        <img src="https://imthirutj.github.io/tjproductionz/Movies/Aladdin/close.png" alt="" onclick="toggle();" class="close" >
+      <video  width=100% id="video-id" poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwObB_9kGagbH6W5LBJrrCbMLKHBZaTJFjdg&usqp=CAU" >
+      
+
+    <source src="#" title="480p" type="video/mp4"></source>
+    
+    <source src="https://srv-store4.gofile.io/download/4ac5806c-bfdf-4b7b-95f6-340a369da2bc/The.Boss.Baby.Family.Business.2021.720p.WEBRip.x264.AAC-%5BYTS.MX%5D.mp4" title="720p" type="video/mp4"></source>
+    
+    <source src="#" title="1080p" type="video/mp4"></source>
+    <img src="https://imthirutj.github.io/tjproductionz/Movies/Aladdin/close.png" alt="" class="close" >
+</video>
+  
+
+       
+    </div>
+    
+    
+
+<script>
+    var myFP = fluidPlayer(
+        'video-id',	{
+	"layoutControls": {
+		"controlBar": {
+			"autoHideTimeout": 3,
+			"animated": true,
+			"autoHide": true
+		},
+		"htmlOnPauseBlock": {
+			"html": null,
+			"height": null,
+			"width": null
+		},
+		"autoPlay": false,
+		"mute": true,
+		"allowTheatre": true,
+		"playPauseAnimation": false,
+		"playbackRateEnabled": false,
+		"allowDownload": false,
+		"playButtonShowing": false,
+		"fillToContainer": false,
+		"posterImage": ""
+	},
+	"vastOptions": {
+		"adList": [],
+		"adCTAText": false,
+		"adCTATextPosition": ""
+	}
+})
+</script>
+</script>
+    <script>
+ 
+        function toggle(){
+        var trailer=document.querySelector('.trailer');
+        let video=document.querySelector('video');
+     
+        trailer.classList.toggle('trailerDis');
+
+        video.pause();
+     
+    }
+    
+      
+    </script>
+</body>
+</html>
