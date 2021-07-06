@@ -4,113 +4,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TJ PRODUCTIONZ</title>
+    <title>Attack on Titan</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     
      <style>
 	 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600&display=swap");
 body,
 html {
+
+
   width: 100%;
   height: 100%;
+      user-select: none;
 }
 body {
-  font-family: "Source Serif Pro", serif;
-  background-color: #1a1a2e;
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #020202;
+
 }
 
-.menu-toggle {
-  position: fixed;
-  right: 15px;
-  top: 15px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  color: #fff;
-  background: rgba(52, 58, 64, 0.5);
-  line-height: 50px;
-  z-index: 999;
+
+.trailer{
+    display:flex ;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+     justify-content: center;
+    align-items: center;
+     top: -200%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+ visibility:hidden;
+     opacity: 0;
+
+}
+.trailerDis{
+     display:flex;
+    position: fixed;
+ transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+
+   visibility:visible;
+   opacity: 1;
 }
 
-.menu-toggle:focus,
-.menu-toggle:hover {
-  color: #fff;
+
+
+.trailer .close{
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+
 }
 
-.menu-toggle:hover {
-  background: #343a40;
-}
 
-/* ************************ */
-#sidebar-wrapper {
-  position: fixed;
-  z-index: 2;
-  right: 0;
-  width: 250px;
-  height: 100%;
-  transition: all 0.4s ease 0s;
-  transform: translateX(250px);
-  background: #1a1a2e;
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  opacity:0.8;
-}
-
-.sidebar-nav {
+nav{
   position: absolute;
-  top: 0;
-  width: 250px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  top: 220px;
+  left: 78px;
+  transform: translate(-50%, -50%);
+  opacity:1;
+  z-index:6;
 }
-
-.sidebar-nav li.sidebar-nav-item a {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  padding: 15px;
+nav .drop-btn{
+  width: 160px;
+  background: #242526;
+  opacity: 01;
+  border-radius: 5px;
+  line-height: 55px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #b0b3b8;
+  padding: 0 20px;
 }
-.sidebar-nav li a:hover {
-  text-decoration: none;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-  text-decoration: none;
-}
-
-.sidebar-nav > .sidebar-brand {
-  font-size: 1.2rem;
-  background: rgba(52, 58, 64, 0.1);
-  height: 80px;
+nav .drop-btn span{
+  float: right;
   line-height: 50px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
+  font-size: 28px;
+  cursor: pointer;
 }
-.sidebar-nav > .sidebar-brand a {
-  color: #fff;
+nav .tooltip{
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+  height: 15px;
+  width: 15px;
+  background: #242526;;
+  transform: rotate(45deg);
+  display: none;
+}
+nav .tooltip.show{
+  display: active;
+}
+nav .wrapper{
+  position: absolute;
+  top: 65px;
+  display: flex;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+  background:black;
+  display: none;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+nav .wrapper.show{
+  display: block;
+  display: flex;
+}
+.wrapper ul{
+  width: 400px;
+  list-style: none;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li{
+  line-height: 55px;
+}
+.wrapper ul li a{
+  position: relative;
+  color: #b0b3b8;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 10px;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  text-decoration: none;
+}
+.wrapper ul li:hover a{
+  background: #3A3B3C;
+}
+ul li a .icon{
+  height: 40px;
+  width: 40px;
+  margin-right: 13px;
+  background: #ffffff1a;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li a .icon span{
+  line-height: 40px;
+  font-size: 20px;
+  color:#E1D8D6;
+}
+ul li a i{
+  position: absolute;
+  right: 10px;
+  font-size: 25px;
+  pointer-events: none;
+}
+.wrapper ul.setting-drop,
+.wrapper ul.help-drop{
+  display: none;
+}
+.wrapper .arrow{
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #b0b3b8;
+  cursor: pointer;
+}
+.wrapper .arrow span{
+  margin-right: 15px;
 }
 
-.sidebar-nav > .sidebar-brand a:hover {
-  color: #fff;
-  background: none;
-}
 
-#sidebar-wrapper.active {
-  right: 250px;
-  width: 250px;
-  transition: all 0.4s ease 0s;
-}
 
-/* ***************** */
-.masthead {
+
+
+
+.poster-bg{
   min-height: 30rem;
   position: relative;
   display: table;
@@ -118,378 +203,420 @@ body {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(
+  background:linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.1) 0%,
       rgba(255, 255, 255, 0.1) 100%
     ),
-    url("https://cdn.hipwallpaper.com/m/71/78/BTRhj4.jpg");
+    url("https://i.pinimg.com/originals/65/c1/23/65c1230b2bcd84a88365f4dd410c9137.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: inset 120px 100px 250px #000, inset -120px -100px 250px #000000;
+    filter: blur(18px);
+  -webkit-filter: blur(18px);
+  box-shadow: inset 30px 10px 60px #000, inset -20px -70px 100px #000000;
 }
-.masthead h1 {
+.play{   /* Black w/opacity/see-through */
   text-transform: uppercase;
-  font-size: 4rem;
-  margin: 0;
+ 
+
+   margin: 0;
   padding: 0;
-  color: #fff;
-}
-
-.masthead .mb-5 em {
-  color: #fff;
-  text-transform: uppercase;
-}
-@media (min-width: 992px) {
-  .masthead {
-    height: 100vh;
-  }
-  .masthead h1 {
-    font-size: 5.5rem;
-  }
-}
-
-.btn-xl {
-  padding: 1.25rem 2.5rem;
-  text-transform: uppercase;
-  background-color: #d35d6e;
-  border: none;
-  color: #fff;
-}
-
-.btn-xl:hover {
-  background-color: #fd3a69;
-  color: #000;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-}
-
-/* ******************* */
-.Container {
-  margin: 2% 2% 0 3%;
-}
-.Movies img {
-  margin-right: 1%;
-  margin-bottom: 10%;
-  width: 100%;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: -4px 4px 5px 0 #000;
-  transition: 0.8s;
-}
-
-.Movies img:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-}
-
-.Container h2 {
-  margin-bottom: 2%;
-  color: #f3e6e3;
-}
-
-/* *********** */
-#footer {
-  background-color: #020314;
-  padding: 2% 15%;
-  color: #fff;
+ color:black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 90%;
+  height:30px;
+   padding: 0px;
+  background-color:white;
+  border-radius: 4px;
   text-align: center;
+  justify-content:center;
+  
+  }
+  .play span{
+    position:absolute;
+  top: 2px;
+  left: 50%;
+  width:30px;
+
+    font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0px;
+
+  }
+
+  .play img{
+  position:absolute;
+  top: -0px;
+  left: 42%;
+  width:30px;
+
+  }
+  .poster img{
+  
+  max-width: 150px;
+  height: auto;
+   position: absolute;
+   
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  }
+  
+  
+  .desc{  margin: 0;
+  padding: 0;
+
+  position: absolute;
+  top: 56%;
+  left: 5%;
+  right:3%;
+  
+  }
+  
+  .desc h1{  font-size: 1.3rem;  font-weight: bold;
+
+  }
+  
+  .desc section{
+  font-size: 0.9rem; 
+  }
+  hr{border-top: 1px solid #4c4c4c; 
+  }
+  
+  
+  .tabs {
+  border-radius:2px;
+   cursor:pointer;
+  color:white;
+  float: left;
+width:120px;
+  padding: 4px;
+  background:none;
+transition:0.5s;
+ /* Should be removed. Only for demonstration */
 }
 
-.social-icon {
-  margin: 20px 10px;
-  cursor: pointer;
+.rows:after {
+
+  content: "";
+  display: table;
+  clear: both;
+}
+.rows .tabs h2{font-size: 1.1rem;  font-weight: bold;}
+
+
+.tabs:active{
+width:120px;
+background-color:silver;
+opacity:0.5;
+z-index:-5;
+  
+}
+img{
+pointer-events: none;}
+.ep:active img{  opacity:0.3;}
+
+.ep{position:absolute;
+left: 0%;
+ right:0%;
+height:165px;
+transition:0.5s;
+ 
+cursor:pointer;
+
+
+}
+.ep:active{
+background-color:silver;
+opacity:0.5;
+z-index:5;
 }
 
-.social-icon:hover {
-  color: cadetblue;
+
+
+.playz{
+ filter: invert(100);
+ position:absolute;
+ left:60px;
+ top:25px;
+ 
 }
 
-.footername {
-  color: coral;
+.season1 span{
+font-size: 1.1rem;  font-weight: bold;
+position:absolute;
+  top: -0px;
+  left: 180px;
+  
+} 
+.season1 p{
+  font-size: 0.7rem; 
+position:absolute;
+  top: 100px;
+  left: 0px;
 }
-.footername:hover {
-  text-decoration: none;
-  color: crimson;
+.go-back{
+cursor:pointer;
+  position: absolute;
+  top: 5px;
+  left: 500px;
+ visibility:visible;
+  opacity:1;
+
 }
 
-/* ************ */
-.scroll-to-top {
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  color: #fff;
-  background: rgba(52, 58, 64, 0.5);
-  line-height: 45px;
-  display: none;
-}
 
-.scroll-to-top:focus,
-.scroll-to-top:hover {
-  color: whitesmoke;
-}
-.scroll-to-top:hover {
-  background: #343a40;
-}
-.scroll-to-top i {
-  font-weight: 800;
-}
 </style>
 </head>
 
-<body id="page-top">
-    <a class="menu-toggle rounded" href="#">
-        <i class="fa fa-bars"></i>
-    </a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a class="js-scroll-trigger" href="#page-top">TJ Productionz</a>
-            </li>
-            
-          
+<body>
+
+
+<header>
+<div class="poster">   <img src=" https://i.pinimg.com/originals/65/c1/23/65c1230b2bcd84a88365f4dd410c9137.jpg" width="200px" height="auto"> </div></header>
+<div class="play">
+<img src="https://www.searchpng.com/wp-content/uploads/2019/02/Play-Black-Icon-PNG-715x673.png" width="5%">
+
+<span>Play</span></div>
+<div class="poster-bg"></div>
+<div class="desc">
+<h1>Attack on Titan</h1>
+<section>After his hometown is destroyed and his mother is killed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction.</section> <hr class="line">
+
+
+
+
+<div class="rows">
+  <div class="tabs" >
+    <h2>Episodes</h2>
+
+  </div>
+  <div class="tabs">
+    <h2>Trailers</h2>
+  
+  </div>
+</div>
+
+
+
+ <nav>
+      <div class="drop-btn">
+        Seasons <span class="fas fa-caret-down"></span>
+      </div>
+      <div class="tooltip"></div>
+      <div class="wrapper">
+        <ul class="menu-bar">
+        
+          <li><a href="https://imthirutj.github.io/tjproductionz/WebSeries/Lucifer/episodes.html">
+            <div class="icon">
+              <span class="fa fa-bars" ></span> </div>
+           Season 01</a></li>
            
-            <li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="#EnglishMovies">English Movies</a>
-            </li>
-            <li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="#TamilMovies">Tamil Movies</a>
-            </li>
-		<li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="#WebSeries">WebSeries</a>
-            </li>
-	    <li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="https://imthirutj.github.io/tjproductionz/Tools/index.html">Search</a>
-            </li>
+           
+          <li class="setting-item"><a href="">
+            <div class="icon">
+              <span class="fa fa-bars"></span></div>
+              Season 02 <!--<i class="fas fa-angle-right"></i> -->
+          </a></li>
+          <li class="help-item"><a href="#">
+            <div class="icon">
+              <span class="fa fa-bars"></span></div>
+              Season 03 
+          </a></li>
+          <li><a href="#">
+            <div class="icon">
+              <span class="fa fa-bars"></span></div>
+              Season 04 </a></li>
+          <li><a href="#">
+            <div class="icon">
+              <span class="fa fa-bars"></span></div>
+              Season 05 </a></li>
         </ul>
-    </nav>
-
-    <!-- Header -->
-    <header class="masthead d-flex">
-        <div class="container text-center my-auto">
-            <h1 class="mb-1">Black Widow</h1>
-            <h3 class="mb-5">
-                <em>Coming Soon On TJ PRODUCTIONZ</em>
-            </h3>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="Movies/BlackWidow/BlackWidow.html">Watch Trailer
-                Now</a>
-        </div>
-        <div class="overlay"></div>
-    </header>
-
 
    
+      </div>
+    </nav>
 
 
-    <!-- english movies section start -->
-    <section id="EnglishMovies">
-        <div class="Container">
-            <h2>English Movies</h2>
-            <div class="row Movies">
-            
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="row">
-                    
-                        <div class="col-6"><a href="https://imthirutj.github.io/tjproductionz/Movies/Aladdin/Aladdin.html"><img
-                                                src="https://m.media-amazon.com/images/M/MV5BMjQ2ODIyMjY4MF5BMl5BanBnXkFtZTgwNzY4ODI2NzM@._V1_.jpg"></a></div>
-                                                
-                        <div class="col-6"><a href="https://imthirutj.github.io/tjproductionz/Movies/Army_of_the_Dead/Army_of_the_Dead.html">
-                        
-                        <img
-                                    src="https://www.comingsoon.net/assets/uploads/gallery/army-of-the-dead/army-of-the-dead-1.jpg"></a></div>
-                                    
-                    </div>
-                </div>
-                
-                
-                
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="row">
-                        <div class="col-6"><a href="https://imthirutj.github.io/tjproductionz/Movies/SpiderManIntoTheSpiderVerse/SpiderManIntoTheSpiderVerse.html"><img
-                                    src="https://media.comicbook.com/2019/09/spider-man-into-the-spider-verse-poster-martin-ansin-mondo-1187700.jpeg?auto=webp&width=800&height=1200&crop=800:1200,smart"></a></div>
-                                    
-                       <div class="col-6"><a href="https://imthirutj.github.io/tjproductionz/Movies/Conjuring3/Conjuring3.html">
-                        
-                        <img
-                                    src="https://upload.wikimedia.org/wikipedia/en/e/e8/The_Conjuring_-_The_Devil_Made_Me_Do_It.png"></a></div>
-                                    
-                                    
-                    </div>
-                    </div>
-                    
-                    
-                    
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="row">
-                    
-                        <div class="col-6"><a href="https://imthirutj.github.io/tjproductionz/Movies/Aladdin/TheTomorrowWar.html"><img
-                                                src="https://m.media-amazon.com/images/M/MV5BNTI2YTI0MWEtNGQ4OS00ODIzLWE1MWEtZGJiN2E3ZmM1OWI1XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg"></a></div>
-                                                
-                        <div class="col-6"><a href="https://imthirutj.github.io/tjproductionz/Movies/TheBossBabyFB.html">
-                        
-                        <img
-                                    src="https://m.media-amazon.com/images/M/MV5BYWY1N2I5MGUtZTBmNS00MWZmLWEyNzAtZjliNzk0ZDVkYzI1XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg"></a></div>
-                                    
-                    </div>
-                </div>
-                    
-                    
-                    
-                    
-                    
-                    
-                </div>
-              
-              
-              
-              
-              
-            </div>
-        </div>
-    </section>
-    <!-- english movies section end -->
+<br>
+ <div class="trailer"> 
+  <div class="go-back" onclick="toggle()">
+  
+  <span class ="fas fa-close" style="color:silver;"> </span>
+  </div>
+<video id="video-id" width="100%" controls poster="" >
+ <source src="" title="480p" type="video/mp4"></source>
+</video>
+  
+</div> <!-- trailer -->
+
+<div class="season1">
+<section>
+ <div class= "ep ep1" onclick="toggle(); ep1();"> <img id="pur1" src=" "   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+<span>Nisen-nengo no Kimi e: Shiganshina Kanraku (1)</span><p>
+Shiganshina, one of mankind forefront defenses against its biggest threat: the titans. Here the lives of Eren Yeager, Mikasa Ackerman and Armin Arlet are seemingly peaceful, but a sudden attack shows them the brutality of this world.<p>
+</div> <!-- ep1 -->
 
 
-    <!-- hindi movies section start -->
-    <section id="TamilMovies">
-        <div class="Container">
-            <h2>Tamil Movies</h2>
-            <div class="row Movies">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="row">
-                        <div class="col-6"><a href="https://imthirutj.github.io/tjproductionz/Movies/Karnan/Karnan.html"><img
-                                    src="https://www.filmibeat.com/ph-big/2021/04/karnan-movie-posters_16179793043.jpg"></a></div>
-                       
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    <!-- webseries section end -->
-
-	    
-	        <section id="WebSeries">
-        <div class="Container">
-            <h2>Web Series</h2>
-            <div class="row Movies">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="row">
-                        <div class="col-6"><a href="https://imthirutj.github.io/tjproductionz/WebSeries/Lucifer/Lucifer.html"><img
-                                    src="https://m.media-amazon.com/images/M/MV5BNzY1YjIxOGMtOTAyZC00YTcyLWFhMzQtZTJkYTljYzU0MGRlXkEyXkFqcGdeQXVyMTAwMzM3NDI3._V1_.jpg"></a></div>
-                        
-                         <div class="col-6"><a href="https://imthirutj.github.io/tjproductionz/WebSeries/FriendsReunion/FriendsReunion.html"><img
-                                      src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1622121026-friends-reunion-key-art-final-vertical-pr-1-3-1622121006.jpg?crop=1xw:1xh;center,top"></a></div>      
-                                      
-                    </div> <!-- row -->
-             </div><!-- col-lg-->
-                
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="row">
-                        <div class="col-6"><a href="https://imthirutj.github.io/tjproductionz/WebSeries/AttackOnTitan.html"><img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGU2-V7cI82Er4C77AeTwBQ7iO-pFp1mnlXKh4R4Mn5QqLYwFEwt4mWZY7CZwOm5x0UFo&usqp=CAU"></a></div>
-                        
-                             
-                                      
-                    </div> <!-- row -->
-             </div><!-- col-lg-->
-                
-			</div><!-- row movies -->
-		    </div> <!-- container -->
-	    
-	    
-
-    <!-- footer section start -->
-    <footer id="footer">
-        <i class="social-icon fa fa-facebook"></i>
-        <i class="social-icon fa fa-twitter"></i>
-        <i class="social-icon fa fa-instagram"></i>
-        <i class="social-icon fa fa-envelope"></i>
-        <i class="social-icon fa fa-pinterest"></i>
-        <i class="social-icon fa fa-youtube"></i>
-        <p>© Copyright 2021 TJProductionz</p>
-    </footer>
-    <!-- footer section end -->
-
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</section>
 
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+ <div class= "ep ep2"> <img id="pur2" src="https://m.media-amazon.com/images/M/MV5BOTlmNDZlMmQtYWNlMy00YzBjLWFkMjUtMDA0NGMyMTU4YjE2XkEyXkFqcGdeQXVyMzExMzk5MTQ@._V1_UY126_CR0,0,224,126_AL_.jpg"   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+<span>That Day: The Fall of Shiganshina, Part 2</span><p>
+After the Titans break through the wall, the citizens of Shiganshina must run for their lives. Those that do make it to safety find a harsh life waiting for them, however.<p>
+</div>
+
+ <div class= "ep ep3"> <img id="pur3" src="https://m.media-amazon.com/images/M/MV5BNzkwMDA0ZmItZTNjNC00YTBiLTk1ZjAtOGI5MWYzMGNmMmY4XkEyXkFqcGdeQXVyMzExMzk5MTQ@._V1_UX224_CR0,0,224,126_AL_.jpg"   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+<span>A Dim Light Amid Despair: Humanity's Comeback, Part 1</span>
+<p>
+Eren begins his training with the Cadet Corps, but questions about his painful past overwhelm him. When he struggles with a maneuvering exercise, Berholt and Reiner offer kindly advice.<p>
+</div>
+
+
+</div> <!-- season1 -->
+</div>
+
+     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        
+        
+        
+         
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+<script>
+    var myFP = fluidPlayer(
+        'video-id',	{
+	"layoutControls": {
+		"controlBar": {
+			"autoHideTimeout": 3,
+			"animated": true,
+			"autoHide": true
+		},
+		"htmlOnPauseBlock": {
+			"html": null,
+			"height": null,
+			"width": null
+		},
+		"autoPlay": false,
+		"mute": true,
+		"allowTheatre": true,
+		"playPauseAnimation": false,
+		"playbackRateEnabled": false,
+		"allowDownload": false,
+		"playButtonShowing": false,
+		"fillToContainer": false,
+		"posterImage": ""
+	},
+	"vastOptions": {
+		"adList": [],
+		"adCTAText": false,
+		"adCTATextPosition": ""
+	}
+})
+</script>
     <script>
-	(function ($) {
-  ("use strict");
+           var pur1="https://m.media-amazon.com/images/M/MV5BOTIwY2VhOTYtNDY4Ni00ZDYwLTllNzItZGZlNjU5YTNlMzkzXkEyXkFqcGdeQXVyODc5MTI0NjU@._V1_UY126_CR14,0,224,126_AL_.jpg";
+    
+        document.getElementById("pur1").src=pur1;
+       </script>
+       
+       <script>
+        var n=1;
+        var d=250;
+        for(n=1;n<=25;n++){
+        
+        var x=document.querySelector(".ep"+n);
+x.style.top=d+"px";
+        d=d+170;
+}
 
-  // closes the sidebar menu
-  $(".menu-toggle").click(function (e) {
-    e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("active");
-    $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass(
-      "fa-bars fa-times"
-    );
-    $(this).toggleClass("active");
-  });
+        function toggle(){
+        var trailer=document.querySelector('.trailer');
+     
+        let video=document.querySelector('video');
+     
+        trailer.classList.toggle('trailerDis');
 
-  //smooth scrolling using jquery and easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-    if (
-      location.pathname.replace(/^\//, "") ==
-        this.pathname.replace(/^\//, "") &&
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-      if (target.length) {
-        $("html, body").animate(
-          {
-            scrollTop: target.offset().top,
-          },
-          1000,
-          "easeInOutExpo"
-        );
-        return false;
+        video.pause();
+         /* var elem = document.getElementById("video-id");
+      if (elem.requestFullscreen) {
+      elem.requestFullscreen();}*/
+
+      
       }
-    }
-  });
-  $("#sidebar-wrapper .js-scroll-trigger").click(function () {
-    $("#sidebar-wrapper").removeClass("active");
-    $("menu-toggle").removeClass("active");
-    $(".menu-toggle > fa.bars, .menu-toggle > .fa-times").toggleClass(
-      "fa-bars fa-times"
-    );
-  });
+        </script>
+        
+        
+        <script>
+        var        ep1_1080p="https://dl.dropboxusercontent.com/s/1zacag9135uc7xh/Lucifer.S01E01.HDTV.x264-LOL%5Beztv%5D.mp4?dl=0";
+        function ep1(){
+        var vid=document.querySelector('video');
+        vid.poster=pur1;
+        vid.src=ep1_1080p;
+        }
+ </script>  
+    
+    
+    <script>
+    
 
-  $(document).scroll(function () {
-    var scrollDistance = $(this).scrollTop();
-    if (scrollDistance > 100) {
-      $(".scroll-to-top").fadeIn();
-    } else {
-      $(".scroll-to-top").fadeOut();
-    }
-  });
-})(jQuery);
+    
+    
+    const drop_btn = document.querySelector(".drop-btn span");
+    const go_back = document.querySelector(".go-back");
+    
+    const tooltip = document.querySelector(".tooltip");
+    const menu_wrapper = document.querySelector(".wrapper");
+    const menu_bar = document.querySelector(".menu-bar");
+    const setting_drop = document.querySelector(".setting-drop");
+    const help_drop = document.querySelector(".help-drop");
+    const setting_item = document.querySelector(".setting-item");
+    const help_item = document.querySelector(".help-item");
+    const setting_btn = document.querySelector(".back-setting-btn");
+    const help_btn = document.querySelector(".back-help-btn");
 
-	
-	</script>
-
+    
+      drop_btn.onclick = (()=>{
+        menu_wrapper.classList.toggle("show");
+        tooltip.classList.toggle("show");
+      });
+      
+    
+     
+      setting_item.onclick = (()=>{
+        menu_bar.style.marginLeft = "-400px";
+        setTimeout(()=>{
+          setting_drop.style.display = "block";
+        }, 100);
+      });
+      help_item.onclick = (()=>{
+        menu_bar.style.marginLeft = "-400px";
+        setTimeout(()=>{
+          help_drop.style.display = "block";
+        }, 100);
+      });
+      setting_btn.onclick = (()=>{
+        menu_bar.style.marginLeft = "0px";
+        setting_drop.style.display = "none";
+      });
+      help_btn.onclick = (()=>{
+        help_drop.style.display = "none";
+        menu_bar.style.marginLeft = "0px";
+      }); 
+     
+     
+    </script> 
+    
+    
 </body>
-
-</html>
