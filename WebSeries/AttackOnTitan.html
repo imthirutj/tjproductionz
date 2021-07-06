@@ -323,25 +323,22 @@ img{
 pointer-events: none;}
 .ep:active img{  opacity:0.3;}
 
-.ep{position:absolute;left: 0%;
+.ep{position:absolute;
+left: 0%;
+ right:0%;
+height:165px;
 transition:0.5s;
-  right:3%;
+ 
 cursor:pointer;
-height:150px;
+
+
 }
 .ep:active{
 background-color:silver;
 opacity:0.5;
 z-index:5;
 }
-.ep1{ 
 
-top:250px;
- }
-  
-.ep2{
-top:400px ;
-}
 
 
 .playz{
@@ -477,6 +474,12 @@ Shiganshina, one of mankind forefront defenses against its biggest threat: the t
 After the Titans break through the wall, the citizens of Shiganshina must run for their lives. Those that do make it to safety find a harsh life waiting for them, however.<p>
 </div>
 
+ <div class= "ep ep3"> <img id="pur3" src="https://m.media-amazon.com/images/M/MV5BNzkwMDA0ZmItZTNjNC00YTBiLTk1ZjAtOGI5MWYzMGNmMmY4XkEyXkFqcGdeQXVyMzExMzk5MTQ@._V1_UX224_CR0,0,224,126_AL_.jpg"   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+<span>A Dim Light Amid Despair: Humanity's Comeback, Part 1</span>
+<p>
+Eren begins his training with the Cadet Corps, but questions about his painful past overwhelm him. When he struggles with a maneuvering exercise, Berholt and Reiner offer kindly advice.<p>
+</div>
+
 
 </div> <!-- season1 -->
 </div>
@@ -527,8 +530,17 @@ After the Titans break through the wall, the citizens of Shiganshina must run fo
     
         document.getElementById("pur1").src=pur1;
        </script>
+       
        <script>
+        var n=1;
+        var d=250;
+        for(n=1;n<=25;n++){
         
+        var x=document.querySelector(".ep"+n);
+x.style.top=d+"px";
+        d=d+170;
+}
+
         function toggle(){
         var trailer=document.querySelector('.trailer');
      
