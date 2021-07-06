@@ -467,24 +467,24 @@ cursor:pointer;
 
 <div class="season season1">
 
- <div class= "ep ep1" onclick="toggle(); ep1();"> <img id="pur1" src=" "   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+ <div class= "ep ep1" onclick="toggle(); ep1();"> <img id="s1pur1" src=" "   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
 <span>Nisen-nengo no Kimi e: Shiganshina Kanraku (1)</span><p>
 Shiganshina, one of mankind forefront defenses against its biggest threat: the titans. Here the lives of Eren Yeager, Mikasa Ackerman and Armin Arlet are seemingly peaceful, but a sudden attack shows them the brutality of this world.<p>
 </div> <!-- ep1 -->
 
- <div class= "ep ep2"> <img id="pur2" src=""   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+ <div class= "ep ep2"  onclick="toggle(); ep2();"> <img id="s1pur2" src=""   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
 <span>That Day: The Fall of Shiganshina, Part 2</span><p>
 After the Titans break through the wall, the citizens of Shiganshina must run for their lives. Those that do make it to safety find a harsh life waiting for them, however.<p>
 </div>
 
- <div class= "ep ep3"> <img id="pur3" src=""   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+ <div class= "ep ep3" onclick="ep();"> <img id="s1pur3" src=""   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
 <span>A Dim Light Amid Despair: Humanity's Comeback, Part 1</span>
 <p>
 Eren begins his training with the Cadet Corps, but questions about his painful past overwhelm him. When he struggles with a maneuvering exercise, Berholt and Reiner offer kindly advice.<p>
 </div>
 
 
- <div class= "ep ep4"> <img id="pur4" src=""   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+ <div class= "ep ep4"> <img id="s1pur4" src=""   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
 <span>The Night of the Closing Ceremony: Humanity's Comeback, Part 2</span>
 <p>
 Annie proves her skill in a sparring session, Jan dreams of serving alongside the King, and graduation day brings shocking revelations - along with a sudden outbreak of violence.<p>
@@ -496,12 +496,12 @@ Annie proves her skill in a sparring session, Jan dreams of serving alongside th
 
 <div class="season season2">
 
- <div class= "ep ep1" onclick="toggle(); ep1();"> <img id="pur1" src=" "   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+ <div class= "ep ep1" onclick="toggle(); ep1();"> <img id="s2pur1" src=" "   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
 <span>Beast Titan</span><p>
 Coupled with the military's cover-up of a previous incident, the shocking discovery inside the wall causes a stir. Elsewhere, while the new Scout recruits are held for observation, a surprising threat appears.<p>
 </div>
 
- <div class= "ep ep2" onclick="toggle(); ep1();"> <img id="pur1" src=" "   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+ <div class= "ep ep2" onclick="toggle(); ep1();"> <img id="s2pur1" src=" "   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
 <span>Tadaima</span><p>
 After the titans appear inside Wall Rose, Eren, Mikasa and Levi head to help the recruits from the 104th Cadet Corps who are scattered across the land to warn the people. Sasha returns to her hometown to safeguard it and comes face to face with her past.<p>
 </div>
@@ -557,12 +557,13 @@ After the titans appear inside Wall Rose, Eren, Mikasa and Levi head to help the
 		"adCTATextPosition": ""
 	}
 })
-</script><script src="https://imthirutj.github.io/tjproductionz/WebSeries/AttackOnTitanPur.js"></script>
-    <script>
+</script>
+<script src="https://imthirutj.github.io/tjproductionz/WebSeries/AttackOnTitanPur.js"></script>
+<script>  
+    
         for(var p=1;p<=25;p++){  
-        document.getElementById("pur"+p).src=pur[p];
-        var vid=document.querySelector('video');
-        vid.poster=pur[p];
+        document.getElementById("s1pur"+p).src=s1pur[p];
+        
         }
         </script>
     
@@ -596,12 +597,25 @@ x.style.top=d+"px";
         </script>
        
         <script>
-        var        ep1_1080p="https://dl.dropboxusercontent.com/s/1zacag9135uc7xh/Lucifer.S01E01.HDTV.x264-LOL%5Beztv%5D.mp4?dl=0";
-        function ep1(){
-        var vid=document.querySelector('video');
-        vid.poster=pur[1];
-        vid.src=ep1_1080p;
-        }
+        //poster and source 
+           
+        
+     var vid=document.querySelector('video');
+     
+
+     function ep1(){
+     vid.poster=s1pur[1];
+     vid.src=ep1_1080p;
+      }
+      
+       function ep2(){
+     vid.poster=s1pur[2];
+     vid.src=ep1_1080p;
+      }
+         function ep2(){
+     vid.poster=s1pur[2];
+     vid.src=ep1_1080p;
+      }
  </script>  
     
     
@@ -626,7 +640,14 @@ x.style.top=d+"px";
      
    
      
-     function s2(){
+  
+     function s1(){
+     document.querySelector(".season2").style.display="none";
+     document.querySelector(".season1").style.display="flex";
+     menu_wrapper.classList.toggle("show");
+ }
+     
+    function s2(){
      document.querySelector(".season1 ").style.display="none";
      document.querySelector(".season2").style.display="flex";
      menu_wrapper.classList.toggle("show");
@@ -635,23 +656,11 @@ x.style.top=d+"px";
      for(var i=1;i<25;i++){
      document.querySelector(".season2 .ep"+i).style.top=d+"px";
      d=d+170;
+     
+     document.querySelector("#s2pur"+i).src=s2pur[i];
 
      }
-
-     
-     }
-     function s1(){
-     document.querySelector(".season2").style.display="none";
-     document.querySelector(".season1").style.display="flex";
-     menu_wrapper.classList.toggle("show");
-
-     
-     
-    
-     
-     }
-     
-     
+ }    
      
     </script> 
     
