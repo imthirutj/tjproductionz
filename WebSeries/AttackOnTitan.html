@@ -381,7 +381,11 @@ cursor:pointer;
   opacity:1;
 
 }
+.download{
+position:absolute;
+top:170px;
 
+}
 
 </style>
 </head>
@@ -413,7 +417,6 @@ cursor:pointer;
   
   </div>
 </div>
-
 
 
 
@@ -464,8 +467,12 @@ cursor:pointer;
 </video>
   
 </div> <!-- trailer -->
+<div><a href="#" target="_blank" class="download">CLICK HERE TO DOWNLOAD THIS SEASON</a>
+</div>
+
 
 <div class="season season1">
+
 
  <div class= "ep ep1" onclick="toggle(); ep1();"> <img id="s1pur1" src=" "   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
 <span>Nisen-nengo no Kimi e: Shiganshina Kanraku (1)</span><p>
@@ -640,18 +647,20 @@ x.style.top=d+"px";
      
    
      
-  
+      document.querySelector(".download").href="https://gofile.io/d/qynfhA";
      function s1(){
      document.querySelector(".season2").style.display="none";
      document.querySelector(".season1").style.display="flex";
      menu_wrapper.classList.toggle("show");
+     document.querySelector(".download").href="https://gofile.io/d/qynfhA";
  }
      
     function s2(){
+     document.querySelector(".download").href="https://gofile.io/d/SAmTaU";
      document.querySelector(".season1 ").style.display="none";
      document.querySelector(".season2").style.display="flex";
      menu_wrapper.classList.toggle("show");
-     
+    
      var d=250;
      for(var i=1;i<25;i++){
      document.querySelector(".season2 .ep"+i).style.top=d+"px";
