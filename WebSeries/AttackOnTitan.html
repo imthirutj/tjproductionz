@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack on Titan</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+     <style>
+	 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600&display=swap");
+body,
+html {
+
+
+  width: 100%;
+  height: 100%;
+      user-select: none;
+}
+body {
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #020202;
+
+}
+
+
+.trailer{
+    display:flex ;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+     justify-content: center;
+    align-items: center;
+     top: -200%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+ visibility:hidden;
+     opacity: 0;
+
+}
+.trailerDis{
+     display:flex;
+    position: fixed;
+ transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+
+   visibility:visible;
+   opacity: 1;
+}
+
+
+
+.trailer .close{
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+
+}
+
+
+nav{
+  position: absolute;
+  top: 220px;
+  left: 78px;
+  transform: translate(-50%, -50%);
+  opacity:1;
+  z-index:6;
+}
+nav .drop-btn{
+  width: 160px;
+  background: #242526;
+  opacity: 01;
+  border-radius: 5px;
+  line-height: 55px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #b0b3b8;
+  padding: 0 20px;
+}
+nav .drop-btn span{
+  float: right;
+  line-height: 50px;
+  font-size: 28px;
+  cursor: pointer;
+}
+nav .tooltip{
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+  height: 15px;
+  width: 15px;
+  background: #242526;;
+  transform: rotate(45deg);
+  display: none;
+}
+nav .tooltip.show{
+  display: active;
+}
+nav .wrapper{
+  position:absolute;
+  top: 65px;
+  
+  display: flex;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+  background:black;
+  display: none;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+
+nav .wrapper.show{
+
+  display:flex;  
+}
+.wrapper ul{
+
+  width: 400px;
+  list-style: none;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li{
+  line-height: 55px;
+}
+.wrapper ul li a{
+  position: relative;
+  color: #b0b3b8;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 10px;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  text-decoration: none;
+}
+.wrapper ul li:hover a{
+  background: #3A3B3C;
+}
+ul li a .icon{
+  height: 40px;
+  width: 40px;
+  margin-right: 13px;
+  background: #ffffff1a;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li a .icon span{
+  line-height: 40px;
+  font-size: 20px;
+  color:#E1D8D6;
+}
+ul li a i{
+  position: absolute;
+  right: 10px;
+  font-size: 25px;
+  pointer-events: none;
+}
+.wrapper ul.setting-drop,
+.wrapper ul.help-drop{
+  display: none;
+}
+.wrapper .arrow{
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #b0b3b8;
+  cursor: pointer;
+}
+.wrapper .arrow span{
+  margin-right: 15px;
+}
+
+
+
+
+
+
+.poster-bg{
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background:linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    url("https://i.pinimg.com/originals/65/c1/23/65c1230b2bcd84a88365f4dd410c9137.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    filter: blur(18px);
+  -webkit-filter: blur(18px);
+  box-shadow: inset 30px 10px 60px #000, inset -20px -70px 100px #000000;
+}
+.play{   /* Black w/opacity/see-through */
+  text-transform: uppercase;
+ 
+
+   margin: 0;
+  padding: 0;
+ color:black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 90%;
+  height:30px;
+   padding: 0px;
+  background-color:white;
+  border-radius: 4px;
+  text-align: center;
+  justify-content:center;
+  
+  }
+  .play span{
+    position:absolute;
+  top: 2px;
+  left: 50%;
+  width:30px;
+
+    font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0px;
+
+  }
+
+  .play img{
+  position:absolute;
+  top: -0px;
+  left: 42%;
+  width:30px;
+
+  }
+  .poster img{
+  
+  max-width: 150px;
+  height: auto;
+   position: absolute;
+   
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  }
+  
+  
+  .desc{  margin: 0;
+  padding: 0;
+
+  position: absolute;
+  top: 56%;
+  left: 5%;
+  right:3%;
+  
+  }
+  
+  .desc h1{  font-size: 1.3rem;  font-weight: bold;
+
+  }
+  
+  .desc section{
+  font-size: 0.9rem; 
+  }
+  hr{border-top: 1px solid #4c4c4c; 
+  }
+  
+  
+  .tabs {
+  border-radius:2px;
+   cursor:pointer;
+  color:white;
+  float: left;
+width:120px;
+  padding: 4px;
+  background:none;
+transition:0.5s;
+ /* Should be removed. Only for demonstration */
+}
+
+.rows:after {
+
+  content: "";
+  display: table;
+  clear: both;
+}
+.rows .tabs h2{font-size: 1.1rem;  font-weight: bold;}
+
+
+.tabs:active{
+width:120px;
+background-color:silver;
+opacity:0.5;
+z-index:-5;
+  
+}
+img{
+pointer-events: none;}
+.ep:active img{  opacity:0.3;}
+
+.ep{position:absolute;
+left: 0%;
+ right:0%;
+height:165px;
+transition:0.5s;
+ 
+cursor:pointer;
+
+
+}
+.ep:active{
+background-color:silver;
+opacity:0.5;
+z-index:5;
+}
+
+
+
+.playz{
+ filter: invert(100);
+ position:absolute;
+ left:60px;
+ top:25px;
+ 
+}
+
+.season span{
+font-size: 1.1rem;  font-weight: bold;
+position:absolute;
+  top: -0px;
+  left: 180px;
+  
+} 
+.season p{
+  font-size: 0.7rem; 
+position:absolute;
+  top: 100px;
+  left: 0px;
+}
+
+.season2{
+display:none;
+}
+.season3{display:none;}
+
+
+.go-back{
+cursor:pointer;
+  position: absolute;
+  top: 5px;
+  left: 500px;
+ visibility:visible;
+  opacity:1;
+
+}
+.download{
+position:absolute;
+top:170px;
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+<div class="poster">   <img src=" https://i.pinimg.com/originals/65/c1/23/65c1230b2bcd84a88365f4dd410c9137.jpg" width="200px" height="auto"> </div></header>
+<div class="play">
+<img src="https://www.searchpng.com/wp-content/uploads/2019/02/Play-Black-Icon-PNG-715x673.png" width="5%">
+
+<span>Play</span></div>
+<div class="poster-bg"></div>
+<div class="desc">
+<h1>Attack on Titan</h1>
+<section>After his hometown is destroyed and his mother is killed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction.</section> <hr class="line">
+
+
+
+
+<div class="rows">
+  <div class="tabs" >
+    <h2>Episodes</h2>
+
+  </div>
+  <div class="tabs">
+    <h2>Trailers</h2>
+  
+  </div>
+</div>
+
+
+
+ <nav>
+      <div class="drop-btn">
+        Seasons <span class="fas fa-caret-down"></span>
+      </div>
+      <div class="tooltip"></div>
+      <div class="wrapper">
+        <ul class="menu-bar">
+        
+          <li class="s01" onclick="s1()"><a href="#">
+            <div class="icon">
+              <span class="fa fa-bars" ></span> </div>
+           Season 01</a></li>
+           
+           
+          <li class="s02" onclick="s2()"><a href="#">
+            <div class="icon">
+              <span class="fa fa-bars"></span></div>
+              Season 02 <!--<i class="fas fa-angle-right"></i> -->
+          </a></li>
+          <li class="s03"><a href="#">
+            <div class="icon">
+              <span class="fa fa-bars"></span></div>
+              Season 03 
+          </a></li>
+          <li class="s04"><a href="#">
+            <div class="icon">
+              <span class="fa fa-bars"></span></div>
+              Season 04 </a></li>
+     
+        </ul>
+
+   
+      </div>
+    </nav>
+
+
+<br>
+ <div class="trailer"> 
+  <div class="go-back" onclick="toggle()">
+  
+  <span class ="fas fa-close" style="color:silver;"> </span>
+  </div>
+<video id="video-id" width="100%" controls poster="" >
+ <source src="" title="480p" type="video/mp4"></source>
+</video>
+  
+</div> <!-- trailer -->
+<div><a href="#" target="_blank" class="download">CLICK HERE TO DOWNLOAD THIS SEASON</a>
+</div>
+
+
+<div class="season season1">
+
+
+ <div class= "ep ep1" onclick="toggle(); ep1();"> <img id="s1pur1" src=" "   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+<span>Nisen-nengo no Kimi e: Shiganshina Kanraku (1)</span><p>
+Shiganshina, one of mankind forefront defenses against its biggest threat: the titans. Here the lives of Eren Yeager, Mikasa Ackerman and Armin Arlet are seemingly peaceful, but a sudden attack shows them the brutality of this world.<p>
+</div> <!-- ep1 -->
+
+ <div class= "ep ep2"  onclick="toggle(); ep2();"> <img id="s1pur2" src=""   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+<span>That Day: The Fall of Shiganshina, Part 2</span><p>
+After the Titans break through the wall, the citizens of Shiganshina must run for their lives. Those that do make it to safety find a harsh life waiting for them, however.<p>
+</div>
+
+ <div class= "ep ep3" onclick="ep();"> <img id="s1pur3" src=""   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+<span>A Dim Light Amid Despair: Humanity's Comeback, Part 1</span>
+<p>
+Eren begins his training with the Cadet Corps, but questions about his painful past overwhelm him. When he struggles with a maneuvering exercise, Berholt and Reiner offer kindly advice.<p>
+</div>
+
+
+ <div class= "ep ep4"> <img id="s1pur4" src=""   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+<span>The Night of the Closing Ceremony: Humanity's Comeback, Part 2</span>
+<p>
+Annie proves her skill in a sparring session, Jan dreams of serving alongside the King, and graduation day brings shocking revelations - along with a sudden outbreak of violence.<p>
+</div>
+
+</div> <!-- season1 -->
+
+
+
+<div class="season season2">
+
+ <div class= "ep ep1" onclick="toggle(); ep1();"> <img id="s2pur1" src=" "   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+<span>Beast Titan</span><p>
+Coupled with the military's cover-up of a previous incident, the shocking discovery inside the wall causes a stir. Elsewhere, while the new Scout recruits are held for observation, a surprising threat appears.<p>
+</div>
+
+ <div class= "ep ep2" onclick="toggle(); ep1();"> <img id="s2pur1" src=" "   width="155px" alt="Pilot" > <img src="https://imthirutj.github.io/tjproductionz/Tools/playz.png" width="37px" class="playz"> 
+<span>Tadaima</span><p>
+After the titans appear inside Wall Rose, Eren, Mikasa and Levi head to help the recruits from the 104th Cadet Corps who are scattered across the land to warn the people. Sasha returns to her hometown to safeguard it and comes face to face with her past.<p>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        
+        
+        
+         
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+<script>
+    var myFP = fluidPlayer(
+        'video-id',	{
+	"layoutControls": {
+		"controlBar": {
+			"autoHideTimeout": 3,
+			"animated": true,
+			"autoHide": true
+		},
+		"htmlOnPauseBlock": {
+			"html": null,
+			"height": null,
+			"width": null
+		},
+		"autoPlay": false,
+		"mute": true,
+		"allowTheatre": true,
+		"playPauseAnimation": false,
+		"playbackRateEnabled": false,
+		"allowDownload": false,
+		"playButtonShowing": false,
+		"fillToContainer": false,
+		"posterImage": ""
+	},
+	"vastOptions": {
+		"adList": [],
+		"adCTAText": false,
+		"adCTATextPosition": ""
+	}
+})
+</script>
+<script src="https://imthirutj.github.io/tjproductionz/WebSeries/AttackOnTitanPur.js"></script>
+<script>  
+    
+        for(var p=1;p<=25;p++){  
+        document.getElementById("s1pur"+p).src=s1pur[p];
+        
+        }
+        </script>
+    
+
+       <script>
+        var n=1;
+        var d=250;
+        for(n=1;n<=25;n++){
+        
+        var x=document.querySelector(".ep"+n);
+x.style.top=d+"px";
+        d=d+170;
+}
+
+
+
+        function toggle(){
+        var trailer=document.querySelector('.trailer');
+     
+        let video=document.querySelector('video');
+     
+        trailer.classList.toggle('trailerDis');
+
+        video.pause();
+         /* var elem = document.getElementById("video-id");
+      if (elem.requestFullscreen) {
+      elem.requestFullscreen();}*/
+
+      
+      }
+        </script>
+       
+        <script>
+        //poster and source 
+           
+        
+     var vid=document.querySelector('video');
+     
+
+     function ep1(){
+     vid.poster=s1pur[1];
+     vid.src=s1src[1];
+      }
+      
+       function ep2(){
+     vid.poster=s1pur[2];
+     vid.src=s1src[2];
+      }
+     function ep3(){
+     vid.poster=s1pur[3];
+     vid.src=s1src[3];
+      }
+ </script>  
+    
+    
+    <script>
+    
+
+    
+    
+    const drop_btn = document.querySelector(".drop-btn span");
+    const go_back = document.querySelector(".go-back");
+    
+    const tooltip = document.querySelector(".tooltip");
+    const menu_wrapper = document.querySelector(".wrapper");
+
+    
+      drop_btn.onclick = (()=>{
+        menu_wrapper.classList.toggle("show");
+        tooltip.classList.toggle("show");
+      });
+      
+    
+     
+   
+     
+      document.querySelector(".download").href="https://gofile.io/d/qynfhA";
+     function s1(){
+     document.querySelector(".season2").style.display="none";
+     document.querySelector(".season1").style.display="flex";
+     menu_wrapper.classList.toggle("show");
+     document.querySelector(".download").href="https://gofile.io/d/qynfhA";
+ }
+     
+    function s2(){
+     document.querySelector(".download").href="https://gofile.io/d/SAmTaU";
+     document.querySelector(".season1 ").style.display="none";
+     document.querySelector(".season2").style.display="flex";
+     menu_wrapper.classList.toggle("show");
+    
+     var d=250;
+     for(var i=1;i<25;i++){
+     document.querySelector(".season2 .ep"+i).style.top=d+"px";
+     d=d+170;
+     
+     document.querySelector("#s2pur"+i).src=s2pur[i];
+
+     }
+ }    
+     
+    </script> 
+    
+    
+</body>

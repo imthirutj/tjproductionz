@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <link rel="stylesheet" href="./List.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Movies</title>
+    <script>
+       
+        async function getdata(){
+        const params = (new URL(location)).searchParams;
+        const id=params.get('id');
+        
+        const url="https://api.themoviedb.org/3/movie/"+id+"?api_key=bfac75eed7ea2964815538e5c47534fa&language=en-US";
+        
+        const response=await fetch(url);
+        
+        const data= await response.json();
+        
+        document.getElementById("mv_name").innerHTML=data.original_title;
+        const img ='https://image.tmdb.org/t/p/w533_and_h300_face/'+data.backdrop_path;
+        const desc=data.overview;
+        document.getElementById("desc").innerHTML=desc;
+        
+      
+        
+        
+        //backimagee
+      
+        document.getElementById("banner").style.backgroundImage='url('+img+')';
+
+        //videologo
+        console.log(data.belongs_to_collection.backdrop_path);
+         document.getElementById("video-id").poster="https://image.tmdb.org/t/p/w533_and_h300_face"+data.belongs_to_collection.backdrop_path;
+
+        
+        }
+        getdata();
+        
+            </script>
+        
+
+
+<style>
+    
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+header .logo{
+    max-width: 120px;
+}
+header .toggle{
+    max-width: 60px;
+    cursor: pointer;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    /* background: url(https://image.tmdb.org/t/p/w500_and_h282_face/AvnqpRwlEaYNVL6wzC4RN94EdSd.jpg); */
+    background-position: center;
+    background-origin: content-box;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.banner .content{
+    max-width: 550px;
+}
+.banner .content h2{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+.banner .content h2 span{
+    font-weight: 800;
+}
+.banner .content p{
+    
+    font-weight: 300;
+    font-size: 1.2em;
+    letter-spacing: 0.02em;
+    line-height: 1.5em;
+    color: #fff;
+    margin: 15px 0 35px;
+}
+
+.play{
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+.play img{
+    margin-right: 10px;
+    max-width: 50px;
+}
+.trailer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.trailer.active{
+    visibility: visible;
+    opacity: 1;
+}
+.trailer video{
+    max-width: 900px;
+    outline: none;
+}
+.trailer .close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+}
+
+@media (max-width: 450px){
+    header{
+        padding: 20px 50px;
+    }
+    header{
+        padding: 20px 50px;
+    }
+    header .logo{
+        max-width: 80px;
+    }
+    header .toggle{
+        max-width: 40px;
+    }
+    .banner{
+        padding: 100px 50px;
+    }
+    .banner .content h2{
+        font-weight: 400;
+        font-size: 2em;
+        letter-spacing: 0.05em; 
+    }
+    .banner .content p{
+        font-size: 1em;
+    }
+    .trailer video{
+        max-width: 90%;
+        outline: none;
+    }
+}
+
+
+</style>
+<link rel="stylesheet" href="textglow.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="#" alt=""></a>
+    <div class="toggle"><a href="../index.html"><img src="./toggle.png" alt=""></a></div>
+    </header>
+    <div class="banner" id="banner">
+        <div class="content">
+           
+                    <h4 class="animate-charcter"><span id="mv_name"></span></h4>
+                  
+                <p id="desc">
+               
+            </p>
+            <a href="#" class="play" onclick="toggle();"><img src="./play.png" alt="">watch now</a>
+        </div>
+    </div>
+    <div class="trailer">
+        <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+        
+        <video controls="" id="video-id"  width="100%">
+
+    <source src="https://silver01.clicknupload.net:8080/d/wg5qbenclryd7tr7lxg4hjqkbvljrghqhsryvd4xsv54v5qep63lhxqbzwt7x7cfhehf4qal/Aladdin_2019_Bluray.mp4" title="480p-Hindi" type="video/mp4"></source>
+    
+    <source src="http://d2.uptofiles.com/files/Tamil%20Dubbed%20Movies/Aladdin%20(2019)/Aladdin%20(640x360)/Aladdin%20HD.mp4" title="480p-Tamil" type="video/mp4"></source>
+    
+    <source src="#" title="480p" type="video/mp4"></source>
+</video>
+
+    <script src="../VideoPlayer.js"></script>
+
+        <img src="./close.png" alt="" class="close" onclick="toggle();">
+    </div>
+    <script>
+        function toggle(){
+        var trailer=document.querySelector('.trailer');
+        let video=document.querySelector('.video');
+        trailer.classList.toggle('active');
+        video.currentTime = 0;
+        video.pause();
+    }
+    //search id api
+    </script>
+
+   </body>
+</html>

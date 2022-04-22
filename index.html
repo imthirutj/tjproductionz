@@ -1,0 +1,495 @@
+
+   
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJ PRODUCTIONZ</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    
+     <style>
+	 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600&display=swap");
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: "Source Serif Pro", serif;
+  background-color: #1a1a2e;
+}
+
+.menu-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 50px;
+  z-index: 999;
+}
+
+.menu-toggle:focus,
+.menu-toggle:hover {
+  color: #fff;
+}
+
+.menu-toggle:hover {
+  background: #343a40;
+}
+
+/* ************************ */
+#sidebar-wrapper {
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  transition: all 0.4s ease 0s;
+  transform: translateX(250px);
+  background: #1a1a2e;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  opacity:0.8;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li.sidebar-nav-item a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px;
+}
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  font-size: 1.2rem;
+  background: rgba(52, 58, 64, 0.1);
+  height: 80px;
+  line-height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+.sidebar-nav > .sidebar-brand a {
+  color: #fff;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+#sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+/* ***************** */
+.masthead {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    url("https://cdn.hipwallpaper.com/m/71/78/BTRhj4.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 120px 100px 250px #000, inset -120px -100px 250px #000000;
+}
+.masthead h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.masthead .mb-5 em {
+  color: #fff;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  .masthead {
+    height: 100vh;
+  }
+  .masthead h1 {
+    font-size: 5.5rem;
+  }
+}
+
+.btn-xl {
+  padding: 1.25rem 2.5rem;
+  text-transform: uppercase;
+  background-color: #d35d6e;
+  border: none;
+  color: #fff;
+}
+
+.btn-xl:hover {
+  background-color: #fd3a69;
+  color: #000;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+/* ******************* */
+.Container {
+  margin: 2% 2% 0 3%;
+}
+.Movies img {
+  margin-right: 1%;
+  margin-bottom: 10%;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: -4px 4px 5px 0 #000;
+  transition: 0.8s;
+}
+
+.Movies img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.Container h2 {
+  margin-bottom: 2%;
+  color: #f3e6e3;
+}
+
+/* *********** */
+#footer {
+  background-color: #020314;
+  padding: 2% 15%;
+  color: #fff;
+  text-align: center;
+}
+
+.social-icon {
+  margin: 20px 10px;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  color: cadetblue;
+}
+
+.footername {
+  color: coral;
+}
+.footername:hover {
+  text-decoration: none;
+  color: crimson;
+}
+
+/* ************ */
+.scroll-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 45px;
+  display: none;
+}
+
+.scroll-to-top:focus,
+.scroll-to-top:hover {
+  color: whitesmoke;
+}
+.scroll-to-top:hover {
+  background: #343a40;
+}
+.scroll-to-top i {
+  font-weight: 800;
+}
+</style>
+</head>
+
+<body id="page-top">
+    <a class="menu-toggle rounded" href="#">
+        <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a class="js-scroll-trigger" href="#page-top">TJ Productionz</a>
+            </li>
+            
+          
+           
+            <li class="sidebar-nav-item">
+                <a class="js-scroll-trigger" href="#EnglishMovies">English Movies</a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a class="js-scroll-trigger" href="#TamilMovies">Tamil Movies</a>
+            </li>
+		<li class="sidebar-nav-item">
+                <a class="js-scroll-trigger" href="#WebSeries">WebSeries</a>
+            </li>
+	    <li class="sidebar-nav-item">
+                <a class="js-scroll-trigger" href="https://imthirutj.github.io/tjproductionz/Tools/index.html">Search</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead d-flex">
+        <div class="container text-center my-auto">
+            <h1 class="mb-1">Black Widow</h1>
+            <h3 class="mb-5">
+                <em>Available On TJ PRODUCTIONZ</em>
+            </h3>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="Movies/BlackWidow/BlackWidow.html">Watch Trailer
+                Now</a>
+        </div>
+        <div class="overlay"></div>
+    </header>
+
+
+   
+
+
+    <!-- english movies section start -->
+    <section id="EnglishMovies">
+        <div class="Container">
+            <h2>English Movies</h2>
+            <div class="row Movies" id="rowMovies">
+            
+                <!-- <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="row">
+                    
+                        <div class="col-6"><a href="https://imthirutj.github.io/tjproductionz/Movies/Aladdin/Aladdin.html"><img
+                                                src="https://m.media-amazon.com/images/M/MV5BMjQ2ODIyMjY4MF5BMl5BanBnXkFtZTgwNzY4ODI2NzM@._V1_.jpg"></a>
+                        </div>
+                                                
+                        <div class="col-6"><a href="https://imthirutj.github.io/tjproductionz/Movies/Army_of_the_Dead/Army_of_the_Dead.html">
+                        
+                        <img
+                                    src="https://www.comingsoon.net/assets/uploads/gallery/army-of-the-dead/army-of-the-dead-1.jpg"></a>
+                        </div>
+
+                   
+                                    
+                    </div>
+                </div> -->
+                
+                
+            </div>
+
+         </div>
+    </section>
+
+<script>
+  var a=0;
+  var anc=0;
+  var img=0;
+  var post=0;
+
+  //api get trending movie
+  const url='https://api.themoviedb.org/3/movie/popular?api_key=bfac75eed7ea2964815538e5c47534fa&language=en-US&page=1';
+async function getdata(){
+const response=await fetch(url);
+
+const data= await response.json();
+
+
+for(var i=0;i<data.results.length;i++){
+var div1 = document.createElement("div");
+div1.className="col-lg-3 col-md-4 col-sm-6";
+document.querySelectorAll("#rowMovies")[0].appendChild(div1);
+
+var div2 = document.createElement("div");
+div2.className="row";
+
+document.getElementsByClassName("col-lg-3 col-md-4 col-sm-6")[i].appendChild(div2);
+
+
+var div3 = document.createElement("div");
+div3.className="col-6";
+document.getElementsByClassName("row")[a+1].appendChild(div3);
+
+var anc1= document.createElement("a");
+anc1.className="anc1";
+anc1.href="./List/List.html?id="+data.results[post].id;
+document.getElementsByClassName("col-6")[anc].appendChild(anc1);
+
+var img1=document.createElement("img");
+img1.src='https://www.themoviedb.org/t/p/w600_and_h900_bestv2/'+data.results[post].poster_path;
+
+console.log(post);
+
+img1.alt=data.results[post].original_title;
+post++;
+document.getElementsByClassName("anc1")[img].appendChild(img1);
+//////
+var div11 = document.createElement("div");
+div11.className="col-6";
+document.getElementsByClassName("row")[a+1].appendChild(div11);
+
+var anc11= document.createElement("a");
+anc11.className="anc1";
+anc11.href="./List/List.html?id="+data.results[post].id;
+document.getElementsByClassName("col-6")[++anc].appendChild(anc11);
+anc++;
+
+var img11=document.createElement("img");
+img11.src='https://www.themoviedb.org/t/p/w600_and_h900_bestv2/'+data.results[post].poster_path;
+console.log(post);
+img11.alt=data.results[post].original_title;
+document.getElementsByClassName("anc1")[++img].appendChild(img11);
+img++;
+a++;
+post++;
+}
+}
+
+getdata();
+
+
+</script>
+
+
+	    
+	    
+
+    <!-- footer section start -->
+    <footer id="footer">
+        <i class="social-icon fa fa-facebook"></i>
+        <i class="social-icon fa fa-twitter"></i>
+        <i class="social-icon fa fa-instagram"></i>
+        <i class="social-icon fa fa-envelope"></i>
+        <i class="social-icon fa fa-pinterest"></i>
+        <i class="social-icon fa fa-youtube"></i>
+        <p>© Copyright 2021 TJProductionz</p>
+    </footer>
+    <!-- footer section end -->
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script>
+	(function ($) {
+  ("use strict");
+
+  // closes the sidebar menu
+  $(".menu-toggle").click(function (e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+    $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass(
+      "fa-bars fa-times"
+    );
+    $(this).toggleClass("active");
+  });
+
+  //smooth scrolling using jquery and easing
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+    if (
+      location.pathname.replace(/^\//, "") ==
+        this.pathname.replace(/^\//, "") &&
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+      if (target.length) {
+        $("html, body").animate(
+          {
+            scrollTop: target.offset().top,
+          },
+          1000,
+          "easeInOutExpo"
+        );
+        return false;
+      }
+    }
+  });
+  $("#sidebar-wrapper .js-scroll-trigger").click(function () {
+    $("#sidebar-wrapper").removeClass("active");
+    $("menu-toggle").removeClass("active");
+    $(".menu-toggle > fa.bars, .menu-toggle > .fa-times").toggleClass(
+      "fa-bars fa-times"
+    );
+  });
+
+  $(document).scroll(function () {
+    var scrollDistance = $(this).scrollTop();
+    if (scrollDistance > 100) {
+      $(".scroll-to-top").fadeIn();
+    } else {
+      $(".scroll-to-top").fadeOut();
+    }
+  });
+})(jQuery);
+
+	
+	</script>
+
+</body>
+
+</html>
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete

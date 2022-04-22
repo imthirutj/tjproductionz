@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Autocomplete Search Box | CodingNepal</title>
+    
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    url("https://cdn.hipwallpaper.com/m/71/78/BTRhj4.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 120px 100px 250px #000, inset -120px -100px 250px #000000;
+  background-color:black;
+}
+
+::selection{
+  color: #fff;
+  background: #664AFF;
+ 
+}
+
+.wrapper{
+  max-width:500px;
+  margin: 150px auto ;
+
+  opacity:0.7;
+
+}
+
+.wrapper .search-input{
+  background:silver;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+  opacity:0.7;
+}
+
+.search-input input{
+
+
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+
+
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li{
+  text-shadow: 2px 2px #41BCBE;
+  font-size:25px;
+  color:black;
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+  opacity:1;
+}
+
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}
+
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #644bff;
+  cursor: pointer;
+}
+    </style>
+    
+    
+    
+    <style>
+
+
+.sidenav {
+
+
+  height: 100%;
+  width: 0;
+  position: fixed;
+ 
+  z-index: ;
+  top: 0;
+  left: 0;
+  background-color: none;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+ 
+  
+  
+}
+
+.sidenav a {
+
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+@media only screen and (max-width: 450px) {
+  
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .wrapper{
+  max-width:200px;
+  }
+  
+
+
+
+
+</style>
+    
+    
+    
+    
+    
+  </head>
+  <body>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="https://imthirutj.github.io/tjproductionz/index.html">Home</a>
+  <a href="#">English Movies</a>
+  <a href="#">Tamil Movies</a>
+  <a href="#">Web Series</a>
+</div>
+
+<span style="position: relative; bottom:100px; left:20px; font-size:30px;  cursor:pointer; color:silver;" onclick="openNav()">&#9776; </span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+  
+  
+  
+    <div class="wrapper">
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input type="text" placeholder="search">
+       
+        
+        <div class="autocom-box">
+          <!-- here list are inserted from javascript -->
+        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
+
+    <script src="https://imthirutj.github.io/tjproductionz/Tools/js/suggestions.js"></script>
+    <script src="https://imthirutj.github.io/tjproductionz/Tools/js/script.js"></script>
+    
+ 
+    
+    
+  </body>
+</html>

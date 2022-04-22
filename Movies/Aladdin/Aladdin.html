@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://imthirutj.github.io/tjproductionz/Movies/Aladdin/Aladdin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aladdin</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="https://imthirutj.github.io/tjproductionz/Movies/Aladdin/logo.png" alt=""></a>
+    <div class="toggle"><a href="../../index.html"><img src="toggle.png" alt=""></a></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2><span>Aladdin</span></h2>
+            <p>
+                When a street urchin finds a lamp with a genie inside, 
+                he uses the lamp to turn himself into a prince in order to win the 
+                heart of a beautiful princess. But an evil vizier is after the lamp too...
+            </p>
+            <a href="#" class="play" onclick="toggle();"><img src="https://imthirutj.github.io/tjproductionz/Movies/Aladdin/play.png" alt="">watch now</a>
+        </div>
+    </div>
+    <div class="trailer">
+        <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+        
+        <video controls="" id="video-id" poster="https://i.redd.it/1279n9tvz0331.jpg" width="100%">
+
+    <source src="https://silver01.clicknupload.net:8080/d/wg5qbenclryd7tr7lxg4hjqkbvljrghqhsryvd4xsv54v5qep63lhxqbzwt7x7cfhehf4qal/Aladdin_2019_Bluray.mp4" title="480p-Hindi" type="video/mp4"></source>
+    
+    <source src="http://d2.uptofiles.com/files/Tamil%20Dubbed%20Movies/Aladdin%20(2019)/Aladdin%20(640x360)/Aladdin%20HD.mp4" title="480p-Tamil" type="video/mp4"></source>
+    
+    <source src="#" title="480p" type="video/mp4"></source>
+</video>
+
+    <script src="https://imthirutj.github.io/tjproductionz/VideoPlayer.js"></script>
+
+        <img src="close.png" alt="" class="close" onclick="toggle();">
+    </div>
+    <script>
+        function toggle(){
+        var trailer=document.querySelector('.trailer');
+        let video=document.querySelector('.video');
+        trailer.classList.toggle('active');
+        video.currentTime = 0;
+        video.pause();
+    }
+    </script>
+</body>
+</html>
